@@ -24,6 +24,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fileAbsolutePath
             frontmatter {
               title
+              subtitle
+              description
+              myRole
+              myRoleDesc
+              targetAudience
+              dateDuration
+              bgColor
               slug
               tags
             }

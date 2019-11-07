@@ -4,6 +4,7 @@ slug: big-test
 date: 2018-01-03
 language: en
 generate-card: false
+targetAudience: "Meoneonoene"
 tags:
   - test
   - huge

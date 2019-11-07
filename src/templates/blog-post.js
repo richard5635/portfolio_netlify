@@ -37,6 +37,7 @@ class BlogPostTemplate extends React.Component {
         />
 
         <Wrapper>
+          <div className="ui segment">{post.frontmatter.targetAudience}</div>
           <Article post={post} />
         </Wrapper>
 
@@ -61,6 +62,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         language
+        subtitle
+        description
+        myRole
+        myRoleDesc
+        targetAudience
+        dateDuration
+        bgColor
         tags
         cover {
           publicURL

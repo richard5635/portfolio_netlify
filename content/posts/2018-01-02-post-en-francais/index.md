@@ -5,6 +5,7 @@ cover: ./cover.jpg
 generate-card: false
 date: 2018-01-02
 language: fr
+targetAudience: "Meoneonoene"
 tags:
     - cheese
     - baguette

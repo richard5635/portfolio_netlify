@@ -5,6 +5,7 @@ cover: ./cover.png
 generate-card: false
 date: 2017-01-03
 language: en
+targetAudience: "Meoneonoene"
 tags:
     - gatsby
 ---

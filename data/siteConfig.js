@@ -1,7 +1,7 @@
 module.exports = {
-  siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
-  authorName: 'Maxence Poutord',
+  siteTitle: 'Richard Hartanto - Portfolio',
+  siteDescription: 'Richards Portfolio yo',
+  authorName: 'Richard Hartanto',
   twitterUsername: '_maxpou',
   authorAvatar: 'avatar.jpeg', // file in content/images
   multilangPosts: true, // enable/disable flags in post lists
@@ -20,10 +20,10 @@ module.exports = {
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'content/images/baymax.png',
-  postsPerPage: 6,
+  icon: 'content/icons/logo.svg',
+  postsPerPage: 10,
   disqusShortname: 'maxpou',
-  headerTitle: 'gatsby-starter-morning-dew',
+  headerTitle: 'Richard Hartanto Portfolio',
   headerLinksIcon: 'baymax.png', //  (leave empty to disable: '')
   headerLinks: [
     {
