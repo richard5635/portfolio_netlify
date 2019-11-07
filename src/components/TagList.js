@@ -10,7 +10,8 @@ const ListContainer = styled.div`
 `
 
 const TagListItem = styled(Link)`
-  margin-left: 0.3rem;
+  /* margin-left: 0.3rem; */
+  margin-right: 0.3rem;
   color: ${colors.textLight};
 
   &:hover {

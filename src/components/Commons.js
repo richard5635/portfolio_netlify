@@ -14,6 +14,7 @@ body {
   font-family: "Lato", sans-serif;
   color: ${colors.text};
   background-color: ${colors.background};
+  transition: background .5s ease;
 }
 
 img {

@@ -115,6 +115,7 @@ class Content extends React.Component {
         <div className="ui stackable grid">
           <div className="sixteen wide column">
             <p>{description}</p>
+            {(tags || date) && <ContentHeader date={date} tags={tags} />}
           </div>
         </div>
         <div class="ui stackable grid">
@@ -132,7 +133,6 @@ class Content extends React.Component {
         </div>
         <div className="ui stackable grid">
           <div className="sixteen wide column">
-            {(tags || date) && <ContentHeader date={date} tags={tags} />}
             <ContentBody>
               <MDXRenderer>{content}</MDXRenderer>
             </ContentBody>

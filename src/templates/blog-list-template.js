@@ -32,7 +32,7 @@ class BlogList extends React.Component {
           <Container>
             <div className="ui stackable grid work-container">
               <div className="eight wide column">
-                <h2 className="ui header text--uppercase">
+                <h2 className="ui header serif">
                   Side Projects
                 </h2>
                 <p>
@@ -47,7 +47,7 @@ class BlogList extends React.Component {
             <div className="ui stackable grid work-container">
               <div className="ten wide column"></div>
               <div className="six wide column">
-                <h2 className="ui header text--uppercase">Internship Projects
+                <h2 className="ui header serif">Internship Projects
                 </h2>
                 <p>I interned at several startups mainly focusing on front-end development.
                 </p>
@@ -58,7 +58,7 @@ class BlogList extends React.Component {
           <Container>
             <div className="ui stackable grid work-container">
               <div className="eight wide column">
-                <h2 className="ui header text--uppercase">School Projects
+                <h2 className="ui header serif">School Projects
                 </h2>
                 <p>I interned at several startups mainly focusing on front-end development.
                 </p>
@@ -70,7 +70,7 @@ class BlogList extends React.Component {
           <Container>
             <div className="ui stackable grid work-container">
               <div className="eight wide column">
-                <h2 className="ui header text--uppercase">
+                <h2 className="ui header serif">
                   Recent Activities
                 </h2>
                 <ul>
@@ -91,7 +91,7 @@ class BlogList extends React.Component {
             <div className="ui stackable grid work-container">
               <div className="eight wide column">Put cards here.</div>
               <div className="eight wide column">
-                <h2 className="ui header text--uppercase">
+                <h2 className="ui header serif">
                   Get In Touch
                 </h2>
                 <p>Do you happen to be in Tokyo? Let’s talk, I know good cafes.</p>

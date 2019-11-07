@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -9,6 +10,10 @@ import PrevNextPost from '../components/PrevNextPost'
 import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
 
+// Richard
+import BackLink from '../components/Link/BackLink'
+import Spacer from '../components/Spacer/Spacer'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.post
@@ -16,6 +21,12 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <div className="ui stackable grid">
+          <BackLink />
+          <Spacer />
+        </div>
+
+
         <SEO
           title={post.frontmatter.title}
           description={post.excerpt}
@@ -32,19 +43,26 @@ class BlogPostTemplate extends React.Component {
         />
 
         <Wrapper>
-          <div className="ui stackable grid">
-            <div className="sixteen wide column">
+          <div className="ui stackable grid article">
+            <div className="eight wide column">
               <h1>{post.frontmatter.title}</h1>
-              <h3>{post.frontmatter.subtitle}</h3>
+              <h5>{post.frontmatter.subtitle}</h5>
+            </div>
+            <div className="eight wide column">
+              <h4>{post.frontmatter.description}</h4>
             </div>
           </div>
         </Wrapper>
 
-
-        <Hero
-          heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-          title={post.frontmatter.title}
-        />
+        <Wrapper><div className="ui stackable grid">
+          <div className="sixteen wide column">
+            <Hero
+              heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
+              title={post.frontmatter.title}
+            />
+          </div>
+        </div>
+        </Wrapper>
 
         <Wrapper>
           <Article post={post} />

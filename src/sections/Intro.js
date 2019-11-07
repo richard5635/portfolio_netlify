@@ -1,4 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
+import { colors } from '../tokens'
+
+const Avatar = styled.img`
+	display: block;
+  min-width: 150px;
+  max-width: 200px;
+  margin: 0 auto;
+`
 
 import Container from '../components/Container'
 import avatar from '../../content/images/me.png'
@@ -20,10 +29,10 @@ class Intro extends React.Component {
 						</div>
 					</div>
 					<div className="two wide column"></div>
-					<div className="three wide column">
-						<img className="ui img avatar" src={avatar}></img>
+					<div className="four wide column">
+						<Avatar className="ui img" src={avatar}></Avatar>
 					</div>
-					<div className="three wide column"></div>
+					<div className="two wide column"></div>
 				</div>
 			</Container>
 		)

@@ -4,7 +4,7 @@ import TagList from './TagList'
 import { colors } from '../tokens'
 
 const Header = styled.header`
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   color: ${colors.textLight};
 `
 

@@ -11,7 +11,7 @@
  *
  */
 
-@import url('https://fonts.googleapis.com/css?family=Lato|Source+Serif+Pro&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Serif+Pro&display=swap');
  *, :after, :before {
      box-sizing: inherit
  }
@@ -200,7 +200,7 @@
      overflow-x: hidden;
      min-width: 320px;
      background: #FFF;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      font-size: 16px;
      line-height: 1.4285em;
      color: #505050;
@@ -215,18 +215,15 @@
  }
 
  h1 {
-     font-family: 'Source Serif Pro', serif;
      min-height: 1rem;
      font-size: 2rem
  }
 
  h2 {
-    font-family: 'Source Serif Pro', serif;
      font-size: 1.71428571rem
  }
 
  h3 {
-    font-family: 'Source Serif Pro', serif;
      font-size: 1.28571429rem
  }
 
@@ -295,7 +292,7 @@
      vertical-align: baseline;
      background: #E0E1E2;
      color: rgba(0, 0, 0, .6);
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      margin: 0 .25em 0 0;
      padding: .78571429em 1.5em;
      text-transform: none;
@@ -3345,7 +3342,7 @@
  }
 
  .ui.text.container {
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      max-width: 700px!important;
      line-height: 1.5;
      font-size: 1.14285714rem
@@ -4537,7 +4534,7 @@
      border: none;
      margin: calc(2rem - .14285714em) 0 1rem;
      padding: 0;
-     /* font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-weight: 700;
      line-height: 1.28571429em;
      text-transform: none;
@@ -9203,7 +9200,7 @@
      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
      text-align: left;
      line-height: 1.21428571em;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      padding: .67857143em 1em;
      background: #FFF;
      border: 1px solid rgba(34, 36, 38, .15);
@@ -10741,7 +10738,7 @@
  .ui.list .list>.item .header, .ui.list>.item .header {
      display: block;
      margin: 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-weight: 700;
      color: rgba(0, 0, 0, .87)
  }
@@ -12741,7 +12738,7 @@
  }
 
  .ui.steps .step .title {
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-size: 1.14285714em;
      font-weight: 700
  }
@@ -13266,7 +13263,7 @@
  }
 
  .ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=file], .ui.form input[type=url], .ui.form input[type=number] {
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      margin: 0;
      outline: 0;
      -webkit-appearance: none;
@@ -15184,7 +15181,7 @@
      display: -ms-flexbox;
      display: flex;
      margin: 1rem 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      background: #FFF;
      font-weight: 400;
      border: 1px solid rgba(34, 36, 38, .15);
@@ -16894,7 +16891,7 @@
 
  .ui.message .header {
      display: block;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-weight: 700;
      margin: -.14285714em 0 0
  }
@@ -18498,7 +18495,7 @@
  .ui.card>.content>.header, .ui.cards>.card>.content>.header {
      display: block;
      margin: '';
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      color: rgba(0, 0, 0, .85)
  }
 
@@ -19659,7 +19656,7 @@
  .ui.items>.item>.content>.header {
      display: inline-block;
      margin: -.21425em 0 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-weight: 700;
      color: rgba(0, 0, 0, .85)
  }
@@ -20006,7 +20003,7 @@
  }
 
  .ui.statistic>.value, .ui.statistics .statistic>.value {
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      font-weight: 400;
      line-height: 1em;
      color: #1B1C1D;
@@ -20015,7 +20012,7 @@
  }
 
  .ui.statistic>.label, .ui.statistics .statistic>.label {
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      font-size: 1em;
      font-weight: 700;
      color: rgba(0, 0, 0, .87);
@@ -20390,7 +20387,7 @@
 
  .ui.accordion .title:not(.ui) {
      padding: .5em 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-size: 1em;
      color: rgba(0, 0, 0, .87)
  }
@@ -22323,7 +22320,7 @@
 
  .ui.modal>.header {
      display: block;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      background: #FFF;
      margin: 0;
      padding: 1.25rem 1.5rem;
@@ -22828,7 +22825,7 @@
 
  .ui.popup>.header {
      padding: 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-size: 1.14285714em;
      line-height: 1.2;
      font-weight: 700
@@ -24041,7 +24038,7 @@
 
  .ui.search>.results .result .title {
      margin: -.14285714em 0 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-weight: 700;
      font-size: 1em;
      color: rgba(0, 0, 0, .85)
@@ -24063,7 +24060,7 @@
  }
 
  .ui.search>.results>.message .header {
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      font-size: 1rem;
      font-weight: 700;
      color: rgba(0, 0, 0, .87)
@@ -24218,7 +24215,7 @@
  .ui.category.search>.results .category>.name {
      width: 100px;
      background: 0 0;
-     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
      font-size: 1em;
      float: 1em;
      float: left;

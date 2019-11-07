@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import useSiteMetadata from '../hooks/use-site-config'
 import { colors, media } from '../tokens'
-import useSiteImages from '../hooks/use-site-images'
 
 // Richards
 import logo from '../../content/icons/headerLogo.svg'
 
 const SiteHeader = styled.div`
 	/* margin-top: 1em;
-  margin-bottom: 1em; */
+	margin-bottom: 1em; */
+	height: 64px;
+
+	@media ${media.medium}{
+		/* height: 128px */
+	}
 `
 
 const Logo = styled.img`
@@ -27,7 +30,7 @@ const Logo = styled.img`
 const MyHeader = props => {
 	return(
 		<SiteHeader>
-			<a href="/"><Logo src={logo}></Logo></a>
+			{/* <a href="/"><Logo src={logo}></Logo></a> */}
 		</SiteHeader>
 	)
 }

@@ -5,11 +5,12 @@ import useSiteMetadata from '../hooks/use-site-config'
 import { colors } from '../tokens'
 
 const FooterWrapper = styled.footer`
+	border-top: solid 1px ${colors.grey100};
   text-align: left;
   padding-top: 30px;
   padding-bottom: 50px;
-  background-color: ${colors.background};
-  color: ${colors.text};
+  background-color: ${colors.white};
+  color: ${colors.primary};
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
