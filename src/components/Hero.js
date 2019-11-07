@@ -2,17 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
-import { colors } from '../tokens'
+import { colors, media } from '../tokens'
 
 const HeroContainer = styled.div`
   position: relative;
   display: table;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   height: 400px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media ${media.xlarge} {
+  }
 `
 
 const TitleContainer = styled.div`
@@ -44,7 +49,7 @@ const Hero = props => {
   return (
     <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
       <TitleContainer>
-        <HeroTitle>{props.title}</HeroTitle>
+        {/* <HeroTitle>{props.title}</HeroTitle> */}
         {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}
       </TitleContainer>
     </HeroContainer>

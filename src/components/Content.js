@@ -108,14 +108,36 @@ const ContentBody = styled.div`
 
 class Content extends React.Component {
   render() {
-    const { content, date, tags } = this.props
+    const { title, subtitle, description, dateDuration, targetAudience, myRole, myRoleDesc, content, date, tags } = this.props
 
     return (
       <section>
-        {(tags || date) && <ContentHeader date={date} tags={tags} />}
-        <ContentBody>
-          <MDXRenderer>{content}</MDXRenderer>
-        </ContentBody>
+        <div className="ui stackable grid">
+          <div className="sixteen wide column">
+            <p>{description}</p>
+          </div>
+        </div>
+        <div class="ui stackable grid">
+          <div class="eight wide column">
+            <h2>Target Audience</h2>
+            <p>{targetAudience}</p>
+            <h2>Date and Work Duration</h2>
+            <p>{dateDuration}</p>
+          </div>
+          <div class="eight wide column">
+            <h2>My Role</h2>
+            <h3>{myRole}</h3>
+            <p>{myRoleDesc}</p>
+          </div>
+        </div>
+        <div className="ui stackable grid">
+          <div className="sixteen wide column">
+            {(tags || date) && <ContentHeader date={date} tags={tags} />}
+            <ContentBody>
+              <MDXRenderer>{content}</MDXRenderer>
+            </ContentBody>
+          </div>
+        </div>
       </section>
     )
   }

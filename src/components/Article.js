@@ -4,7 +4,7 @@ import Bio from './Bio'
 import Content from './Content'
 
 const ArticleWrapper = styled.article`
-  padding: 0 30px 30px;
+  padding: 0;
 
   @media only screen and (max-width: 500px) {
     padding: 0;
@@ -28,10 +28,17 @@ class Article extends React.Component {
           content={post.body}
           date={post.frontmatter.date}
           tags={post.frontmatter.tags}
+          title={post.frontmatter.title} 
+          subtitle={post.frontmatter.subtitle} 
+          description={post.frontmatter.description} 
+          dateDuration={post.frontmatter.dateDuration} 
+          targetAudience={post.frontmatter.targetAudience} 
+          myRole={post.frontmatter.myRole}
+          myRoleDesc={post.frontmatter.myRoleDesc} 
         />
-        <ArticleFooter>
+        {/* <ArticleFooter>
           <Bio />
-        </ArticleFooter>
+        </ArticleFooter> */}
       </ArticleWrapper>
     )
   }

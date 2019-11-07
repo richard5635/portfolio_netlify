@@ -31,18 +31,27 @@ class BlogPostTemplate extends React.Component {
           isBlogPost
         />
 
+        <Wrapper>
+          <div className="ui stackable grid">
+            <div className="sixteen wide column">
+              <h1>{post.frontmatter.title}</h1>
+              <h3>{post.frontmatter.subtitle}</h3>
+            </div>
+          </div>
+        </Wrapper>
+
+
         <Hero
           heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
           title={post.frontmatter.title}
         />
 
         <Wrapper>
-          <div className="ui segment">{post.frontmatter.targetAudience}</div>
           <Article post={post} />
         </Wrapper>
 
         <Wrapper>
-          <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
+          {/* <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} /> */}
           <PrevNextPost previous={previous} next={next} />
         </Wrapper>
       </Layout>

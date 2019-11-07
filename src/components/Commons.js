@@ -35,14 +35,16 @@ ol {
 }
 `
 export const StyledLink = styled(Link)`
-  border-bottom: 1px dotted ${colors.primary};
+  color: ${colors.grey400};
+  transition: 0.3s;
 
   &:hover {
-    border-bottom-style: solid;
+    color: ${colors.grey300};
   }
 `
 
 export const Text = styled.p`
+  text-align: center;
   line-height: 1.6;
   margin: 1em 0 0 0;
 `
