@@ -13,6 +13,7 @@ import SEO from '../components/SEO'
 import Segment from '../components/Segment'
 import Container from '../components/Container'
 import Spacer from '../components/Spacer/Spacer'
+import ArticleCard from '../components/ArticleCard'
 
 import Intro from '../sections/Intro'
 
@@ -21,6 +22,10 @@ class BlogList extends React.Component {
     const { title, description } = this.props.data.site.siteMetadata
     const posts = this.props.data.posts.edges
     const { pageContext } = this.props
+
+    const sideProjectPosts = posts.filter(item => item.node.frontmatter.projectType == "Side");
+    const schoolProjectPosts = posts.filter(item => item.node.frontmatter.projectType == "School");
+    const internProjectPosts = posts.filter(item => item.node.frontmatter.projectType == "Internship");
 
     return (
       <Layout location={this.props.location}>
@@ -39,21 +44,43 @@ class BlogList extends React.Component {
                   I love creating digital products that connect to reality.
                 </p>
               </div>
-              <div className="eight wide column" ></div>
+              <div className="eight wide column" >
+                {sideProjectPosts.map(post => {
+                  const props = {
+                    title: post.node.frontmatter.title,
+                    subtitle: post.node.frontmatter.subtitle,
+                    cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                    slug: post.node.frontmatter.slug
+                  };
+                  return <ArticleCard key={props.slug} {...props} />
+                })}
+              </div>
             </div>
-            <Spacer/>
+            <Spacer />
           </Container>
           <Container>
             <div className="ui stackable grid work-container">
-              <div className="ten wide column"></div>
-              <div className="six wide column">
-                <h2 className="ui header serif">Internship Projects
+              <div className="mobile reversed row">
+                <div className="eight wide column">
+                  <h2 className="ui header serif">Internship Projects
                 </h2>
-                <p>I interned at several startups mainly focusing on front-end development.
+                  <p>I interned at several startups mainly focusing on front-end development.
                 </p>
+                </div>
+                <div className="eight wide column">
+                  {internProjectPosts.map(post => {
+                    const props = {
+                      title: post.node.frontmatter.title,
+                      subtitle: post.node.frontmatter.subtitle,
+                      cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                      slug: post.node.frontmatter.slug
+                    };
+                    return <ArticleCard key={props.slug} {...props} />
+                  })}
+                </div>
               </div>
             </div>
-            <Spacer/>
+            <Spacer />
           </Container>
           <Container>
             <div className="ui stackable grid work-container">
@@ -63,9 +90,19 @@ class BlogList extends React.Component {
                 <p>I interned at several startups mainly focusing on front-end development.
                 </p>
               </div>
-              <div className="eight wide column">Put cards here.</div>
+              <div className="eight wide column">
+                {schoolProjectPosts.map(post => {
+                  const props = {
+                    title: post.node.frontmatter.title,
+                    subtitle: post.node.frontmatter.subtitle,
+                    cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                    slug: post.node.frontmatter.slug
+                  };
+                  return <ArticleCard key={props.slug} {...props} />
+                })}
+              </div>
             </div>
-            <Spacer/>
+            <Spacer />
           </Container>
           <Container>
             <div className="ui stackable grid work-container">
@@ -85,7 +122,7 @@ class BlogList extends React.Component {
 
               </div>
             </div>
-            <Spacer/>
+            <Spacer />
           </Container>
           <Container>
             <div className="ui stackable grid work-container">
@@ -102,7 +139,8 @@ class BlogList extends React.Component {
           </Container>
         </Segment>
         <SEO />
-        <Hero title={title} subTitle={description} />
+
+        {/* <Hero title={title} subTitle={description} />
 
         <Wrapper>
           <PostsList posts={posts} />
@@ -111,7 +149,8 @@ class BlogList extends React.Component {
         <Pagination
           nbPages={pageContext.nbPages}
           currentPage={pageContext.currentPage}
-        />
+        /> */}
+
       </Layout>
     )
   }
@@ -139,9 +178,14 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            subtitle
+            projectType
             tags
             language
             slug
+            cover{
+              publicURL
+            }
           }
         }
       }

@@ -26,7 +26,6 @@ class BlogPostTemplate extends React.Component {
           <Spacer />
         </div>
 
-
         <SEO
           title={post.frontmatter.title}
           description={post.excerpt}

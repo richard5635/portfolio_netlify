@@ -26,6 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               title
               subtitle
               description
+              projectType
               myRole
               myRoleDesc
               targetAudience
