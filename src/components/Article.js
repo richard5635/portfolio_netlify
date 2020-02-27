@@ -4,6 +4,7 @@ import Bio from './Bio'
 import Content from './Content'
 
 const ArticleWrapper = styled.article`
+  font-size: 1em;
   padding: 0;
 
   @media only screen and (max-width: 500px) {

@@ -11,6 +11,7 @@ const colors = {
   grey800: '#1C1D20',
   grey900: '#131315',
 
+  black: '#000000',
   white: '#ffffff',
 }
 
@@ -19,9 +20,9 @@ export default {
   textLightest: colors.white,
   textLightestHover: colors.grey200,
   textLight: '#57595d',
-  primary: colors.grey500,
+  primary: colors.black,
   primaryAlpha: `rgba(32, 35, 42, 0.85)`,
-  text: colors.grey500,
+  text: colors.black,
   background: '#f4f8fb',
   backgroundArticle: colors.white,
   heartFooter: 'red',

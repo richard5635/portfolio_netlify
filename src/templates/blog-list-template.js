@@ -36,7 +36,7 @@ class BlogList extends React.Component {
         <Segment>
           <Container>
             <div className="ui stackable grid work-container">
-              <div className="eight wide column">
+              <div className="sixteen wide column">
                 <h2 className="ui header serif">
                   Side Projects
                 </h2>
@@ -44,7 +44,9 @@ class BlogList extends React.Component {
                   I love creating digital products that connect to reality.
                 </p>
               </div>
-              <div className="eight wide column" >
+            </div>
+            <div className="ui stackable grid work-container">
+              <div className="sixteen wide column" >
                 {sideProjectPosts.map(post => {
                   const props = {
                     title: post.node.frontmatter.title,
@@ -60,37 +62,39 @@ class BlogList extends React.Component {
           </Container>
           <Container>
             <div className="ui stackable grid work-container">
-              <div className="mobile reversed row">
-                <div className="eight wide column">
-                  <h2 className="ui header serif">Internship Projects
+              <div className="sixteen wide column">
+                <h2 className="ui header serif">Internship Projects
                 </h2>
-                  <p>I interned at several startups mainly focusing on front-end development.
+                <p>I interned at several startups mainly focusing on front-end development.
                 </p>
-                </div>
-                <div className="eight wide column">
-                  {internProjectPosts.map(post => {
-                    const props = {
-                      title: post.node.frontmatter.title,
-                      subtitle: post.node.frontmatter.subtitle,
-                      cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
-                      slug: post.node.frontmatter.slug
-                    };
-                    return <ArticleCard key={props.slug} {...props} />
-                  })}
-                </div>
+              </div>
+            </div>
+            <div className="ui stackable grid work-container">
+              <div className="sixteen wide column">
+                {internProjectPosts.map(post => {
+                  const props = {
+                    title: post.node.frontmatter.title,
+                    subtitle: post.node.frontmatter.subtitle,
+                    cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                    slug: post.node.frontmatter.slug
+                  };
+                  return <ArticleCard key={props.slug} {...props} />
+                })}
               </div>
             </div>
             <Spacer />
           </Container>
           <Container>
             <div className="ui stackable grid work-container">
-              <div className="eight wide column">
+              <div className="sixteen wide column">
                 <h2 className="ui header serif">School Projects
                 </h2>
                 <p>I interned at several startups mainly focusing on front-end development.
                 </p>
               </div>
-              <div className="eight wide column">
+            </div>
+            <div className="ui stackable grid work-container">
+              <div className="sixteen wide column">
                 {schoolProjectPosts.map(post => {
                   const props = {
                     title: post.node.frontmatter.title,

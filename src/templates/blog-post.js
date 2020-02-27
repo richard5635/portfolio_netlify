@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import Article from '../components/Article'
+import BackToTop from '../components/Buttons/BackToTop'
 import PrevNextPost from '../components/PrevNextPost'
 import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
@@ -14,6 +15,19 @@ import Disqus from '../components/Disqus'
 import BackLink from '../components/Link/BackLink'
 import Spacer from '../components/Spacer/Spacer'
 
+
+const ContentWrapper = styled.div`
+  max-width: 764px;
+  margin: auto;
+`
+
+const PostTitle = styled.h1`
+  font-size: 5em;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+`
+
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.post
@@ -21,10 +35,8 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div className="ui stackable grid">
-          <BackLink />
-          <Spacer />
-        </div>
+        {/* <div className="ui stackable grid">
+        </div> */}
 
         <SEO
           title={post.frontmatter.title}
@@ -43,18 +55,17 @@ class BlogPostTemplate extends React.Component {
 
         <Wrapper>
           <div className="ui stackable grid article">
-            <div className="eight wide column">
-              <h1>{post.frontmatter.title}</h1>
-              <h5>{post.frontmatter.subtitle}</h5>
-            </div>
-            <div className="eight wide column">
-              <h4>{post.frontmatter.description}</h4>
+            <div className="twelve wide column">
+              <BackLink />
+              <PostTitle>{post.frontmatter.title}</PostTitle>
+              <h5 className = "serif">{post.frontmatter.subtitle}</h5>
             </div>
           </div>
         </Wrapper>
 
         <Wrapper><div className="ui stackable grid">
           <div className="sixteen wide column">
+            {/* <h4>{post.frontmatter.description}</h4> */}
             <Hero
               heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
               title={post.frontmatter.title}
@@ -64,13 +75,28 @@ class BlogPostTemplate extends React.Component {
         </Wrapper>
 
         <Wrapper>
-          <Article post={post} />
+          <ContentWrapper>
+            <Article post={post} />
+          </ContentWrapper>
         </Wrapper>
 
-        <Wrapper>
+        {/* <Wrapper> */}
           {/* <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} /> */}
-          <PrevNextPost previous={previous} next={next} />
+          {/* <PrevNextPost previous={previous} next={next} /> */}
+        {/* </Wrapper> */}
+
+        <Spacer/>
+
+        <Wrapper>
+          <div className="ui stackable grid article">
+            <BackLink />
+          </div>
         </Wrapper>
+        
+        <Spacer/>
+
+        {/* Back to top button */}
+        {/* <BackToTop/> */}
       </Layout>
     )
   }

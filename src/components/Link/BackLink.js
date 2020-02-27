@@ -6,11 +6,23 @@ import { colors, media } from '../../tokens'
 
 // Richards
 
+const StyledBackLink = styled(Link)`
+	font-family: "Lato", sans-serif;
+	color: ${colors.grey400};
+	transition: 0.3s;
+
+	&:hover {
+		color: ${colors.black};
+		background-color: 'cyan';
+		
+  	}
+`
+
 const BackLink = props => {
 	return(
-		<StyledLink to="/">
-			<i class="angle left icon"></i> Back to homepage
-		</StyledLink>
+		<StyledBackLink to="/">
+			<i class="angle left icon"></i> WORK
+		</StyledBackLink>
 	)
 }
 

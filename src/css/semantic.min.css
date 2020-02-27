@@ -11,7 +11,10 @@
  *
  */
 
- @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Serif+Pro&display=swap');
+ /* @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Serif+Pro&display=swap'); */
+ @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&display=swap');
+
+
  *, :after, :before {
      box-sizing: inherit
  }
@@ -191,7 +194,7 @@
  }
 
  html {
-     font-size: 16px
+     font-size: 18px
  }
 
  body {
@@ -200,10 +203,10 @@
      overflow-x: hidden;
      min-width: 320px;
      background: #FFF;
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-     font-size: 16px;
+     font-family: 'Noto Serif JP', 'Times New Roman';
+     font-size: 18px;
      line-height: 1.4285em;
-     color: #505050;
+     /* color: #505050; */
      font-smoothing: antialiased
  }
 
@@ -292,7 +295,7 @@
      vertical-align: baseline;
      background: #E0E1E2;
      color: rgba(0, 0, 0, .6);
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      margin: 0 .25em 0 0;
      padding: .78571429em 1.5em;
      text-transform: none;
@@ -3342,7 +3345,7 @@
  }
 
  .ui.text.container {
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      max-width: 700px!important;
      line-height: 1.5;
      font-size: 1.14285714rem
@@ -9200,7 +9203,7 @@
      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
      text-align: left;
      line-height: 1.21428571em;
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      padding: .67857143em 1em;
      background: #FFF;
      border: 1px solid rgba(34, 36, 38, .15);
@@ -13263,7 +13266,7 @@
  }
 
  .ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=file], .ui.form input[type=url], .ui.form input[type=number] {
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      margin: 0;
      outline: 0;
      -webkit-appearance: none;
@@ -20003,7 +20006,7 @@
  }
 
  .ui.statistic>.value, .ui.statistics .statistic>.value {
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-weight: 400;
      line-height: 1em;
      color: #1B1C1D;
@@ -20012,7 +20015,7 @@
  }
 
  .ui.statistic>.label, .ui.statistics .statistic>.label {
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-size: 1em;
      font-weight: 700;
      color: rgba(0, 0, 0, .87);
@@ -24060,7 +24063,7 @@
  }
 
  .ui.search>.results>.message .header {
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-size: 1rem;
      font-weight: 700;
      color: rgba(0, 0, 0, .87)
@@ -24215,7 +24218,7 @@
  .ui.category.search>.results .category>.name {
      width: 100px;
      background: 0 0;
-     font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     /* font-family: Open Sans, 'Helvetica Neue', Arial, Helvetica, sans-serif; */
      font-size: 1em;
      float: 1em;
      float: left;
