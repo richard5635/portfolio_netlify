@@ -16,7 +16,6 @@ const BackToTopUI = styled.div`
     vertical-align: middle;
 `
 
-const currPage = location+"#";
 
 const BackToTop = props => {
 	return(
