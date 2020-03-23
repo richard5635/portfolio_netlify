@@ -1,5 +1,6 @@
 // Home Page - Richard
 import React from 'react'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -8,6 +9,9 @@ import Hero from '../components/Hero'
 import PostsList from '../components/PostsList'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
+import MyFooter from '../components/MyFooter'
+
+import { TextUrl } from '../components/Commons'
 
 // Richard
 import Segment from '../components/Segment'
@@ -15,7 +19,36 @@ import Container from '../components/Container'
 import Spacer from '../components/Spacer/Spacer'
 import ArticleCard from '../components/ArticleCard'
 
+// Sections
 import Intro from '../sections/Intro'
+import RecentActivities from '../sections/RecentActivities'
+
+// Images
+import contactPhoto from '../../content/images/contact.jpg'
+
+// Styled Components
+const Project = styled.div`
+
+`
+
+const CaptionBox = styled.div`
+  margin: 32px 0;
+`
+
+const WorkBox = styled.div`
+`
+
+const CardGrid = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`
+
+const Divider = styled.div`
+  display: block;
+  height: 1px;
+  border-bottom: 1px solid;
+  border-color: rgba(151,151,151,0.8);
+`
 
 class BlogList extends React.Component {
   render() {
@@ -33,116 +66,118 @@ class BlogList extends React.Component {
         <Segment>
           <Intro />
         </Segment>
-        <Segment>
-          <Container>
-            <div className="ui stackable grid work-container">
-              <div className="sixteen wide column">
-                <h2 className="ui header serif">
-                  Side Projects
-                </h2>
-                <p>
-                  I love creating digital products that connect to reality.
-                </p>
-              </div>
-            </div>
-            <div className="ui stackable grid work-container">
-              <div className="sixteen wide column" >
-                {sideProjectPosts.map(post => {
-                  const props = {
-                    title: post.node.frontmatter.title,
-                    subtitle: post.node.frontmatter.subtitle,
-                    cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
-                    slug: post.node.frontmatter.slug
-                  };
-                  return <ArticleCard key={props.slug} {...props} />
-                })}
-              </div>
-            </div>
-            <Spacer />
-          </Container>
-          <Container>
-            <div className="ui stackable grid work-container">
-              <div className="sixteen wide column">
-                <h2 className="ui header serif">Internship Projects
-                </h2>
-                <p>I interned at several startups mainly focusing on front-end development.
-                </p>
-              </div>
-            </div>
-            <div className="ui stackable grid work-container">
-              <div className="sixteen wide column">
-                {internProjectPosts.map(post => {
-                  const props = {
-                    title: post.node.frontmatter.title,
-                    subtitle: post.node.frontmatter.subtitle,
-                    cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
-                    slug: post.node.frontmatter.slug
-                  };
-                  return <ArticleCard key={props.slug} {...props} />
-                })}
-              </div>
-            </div>
-            <Spacer />
-          </Container>
-          <Container>
-            <div className="ui stackable grid work-container">
-              <div className="sixteen wide column">
-                <h2 className="ui header serif">School Projects
-                </h2>
-                <p>I interned at several startups mainly focusing on front-end development.
-                </p>
-              </div>
-            </div>
-            <div className="ui stackable grid work-container">
-              <div className="sixteen wide column">
-                {schoolProjectPosts.map(post => {
-                  const props = {
-                    title: post.node.frontmatter.title,
-                    subtitle: post.node.frontmatter.subtitle,
-                    cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
-                    slug: post.node.frontmatter.slug
-                  };
-                  return <ArticleCard key={props.slug} {...props} />
-                })}
-              </div>
-            </div>
-            <Spacer />
-          </Container>
-          <Container>
-            <div className="ui stackable grid work-container">
-              <div className="eight wide column">
-                <h2 className="ui header serif">
-                  Recent Activities
-                </h2>
-                <ul>
-                  <li>Started interning at Pretia as UI/UX Engineer.</li>
-                  <li>Working on my Graduate School thesis on Computer Vision.</li>
-                  <li>Participated in IDEO Tokyo’s startup makeathon.</li>
-                  <li>My team won an honorable mention award in SICF20 with InWoFumu.</li>
-                  <li>Exhibited an Interactive Storytelling Installation in Jakarta.</li>
-                </ul>
-              </div>
-              <div className="eight wide column">
 
-              </div>
-            </div>
-            <Spacer />
-          </Container>
-          <Container>
-            <div className="ui stackable grid work-container">
-              <div className="eight wide column">Put cards here.</div>
-              <div className="eight wide column">
-                <h2 className="ui header serif">
-                  Get In Touch
-                </h2>
-                <p>Do you happen to be in Tokyo? Let’s talk, I know good cafes.</p>
-                <p>Here is my resume.</p>
-                <p>You can also contact me through the media below.</p>
-              </div>
-            </div>
-          </Container>
+        <Segment>
+          <CaptionBox>
+            <h3>
+              Side Projects
+            </h3>
+            <div className="spacer16px" />
+            <p>
+              I love creating digital products that connect to reality.
+            </p>
+          </CaptionBox>
+          <Divider />
+          <WorkBox>
+            <h5>
+              WORKS
+            </h5>
+            <CardGrid >
+              {sideProjectPosts.map(post => {
+                const props = {
+                  title: post.node.frontmatter.title,
+                  subtitle: post.node.frontmatter.subtitle,
+                  cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                  slug: post.node.frontmatter.slug
+                };
+                return <ArticleCard key={props.slug} {...props} />
+              })}
+            </CardGrid>
+          </WorkBox>
+
+          <div className="spacer32px" />
+          <Divider />
+          <div className="spacer32px" />
+
         </Segment>
-        <SEO />
+
+        <Segment>
+          <CaptionBox>
+            <h3>
+              Internship Projects
+            </h3>
+            <div className="spacer16px" />
+            <p>
+              I interned at several startups mainly focusing on front-end development.
+            </p>
+          </CaptionBox>
+          <Divider />
+          <WorkBox>
+            <h5>
+              WORKS
+            </h5>
+            <CardGrid>
+              {internProjectPosts.map(post => {
+                const props = {
+                  title: post.node.frontmatter.title,
+                  subtitle: post.node.frontmatter.subtitle,
+                  cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                  slug: post.node.frontmatter.slug
+                };
+                return <ArticleCard key={props.slug} {...props} />
+              })}
+            </CardGrid>
+          </WorkBox>
+
+          <div className="spacer32px" />
+          <Divider />
+          <div className="spacer32px" />
+
+        </Segment>
+
+        <Segment>
+          <CaptionBox>
+            <h3>
+              School Projects
+            </h3>
+            <div className="spacer16px" />
+            <p>
+              I interned at several startups mainly focusing on front-end development.
+            </p>
+          </CaptionBox>
+          <Divider />
+          <WorkBox>
+            <h5>
+              WORKS
+            </h5>
+            <CardGrid>
+              {schoolProjectPosts.map(post => {
+                const props = {
+                  title: post.node.frontmatter.title,
+                  subtitle: post.node.frontmatter.subtitle,
+                  cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                  slug: post.node.frontmatter.slug
+                };
+                return <ArticleCard key={props.slug} {...props} />
+              })}
+            </CardGrid>
+          </WorkBox>
+
+          <div className="spacer32px" />
+          <Divider />
+          <div className="spacer32px" />
+
+        </Segment>
+
+        {/* <Segment>
+          <RecentActivities />
+        </Segment> */}
+
+        <Segment>
+
+          <MyFooter/>
+        </Segment>
+      <SEO />
 
         {/* <Hero title={title} subTitle={description} />
 
@@ -155,7 +190,7 @@ class BlogList extends React.Component {
           currentPage={pageContext.currentPage}
         /> */}
 
-      </Layout>
+      </Layout >
     )
   }
 }

@@ -1,14 +1,156 @@
-html{
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&display=swap');
+html {
     scroll-behavior: smooth;
 }
 
-.article {
+body {
+    background: #F0F5F9;
+    font-family: 'Noto Serif JP', 'Times New Roman';
+    font-size: 18px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.8);
 }
 
+/* Typography */
 
-
-.article h5 {
-    font-size: 2em;
-    margin: 0 0 8px 0;
+h1 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 84px;
+    
 }
 
+h2 {
+    font-size: 36px;
+    line-height: 51px;
+}
+
+h3 {
+    font-family: 'Helvetica', 'Arial';
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 43px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+h5 {
+    font-family: 'Helvetica', 'Arial';
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 48px;
+}
+
+a {
+    color: rgba(0,0,0,0.8);
+    text-decoration: underline;
+
+	transition: 0.125s;
+}
+
+a:hover {
+    color: #90AAC3;
+}
+
+.caption {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 780px) and (max-width: 1023px){
+    h1 {
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 80px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+@media screen and (max-width: 779px) and (min-width: 564px){
+    body {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 72px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+@media screen and (max-width: 563px){
+    body {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        line-height: 72px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+/* Structure and Spacing */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+}
+
+.spacer8px{
+    height: 8px;
+}
+
+.spacer16px{
+    height: 16px;
+}
+
+.spacer32px{
+    height: 32px;
+}
+
+.spacer64px{
+    height: 64px;
+}
+
+.spacer128px{
+    height: 128px;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+}

@@ -6,6 +6,7 @@ import Footer from './Footer'
 import 'prismjs/themes/prism-tomorrow.css'
 import { GlobalStyle } from './Commons'
 import { media } from '../tokens'
+import Spacer from './Spacer/Spacer';
 
 // Richard
 import '../css/semantic.min.css'
@@ -39,7 +40,7 @@ class Template extends React.Component {
         <MyHeader />
         <SiteContent>{children}</SiteContent>
         {/* <Footer /> */}
-        <MyFooter />
+        {/* <MyFooter />s */}
       </>
     )
   }

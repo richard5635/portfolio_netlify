@@ -9,11 +9,15 @@ import logo from '../../content/icons/headerLogo.svg'
 const SiteHeader = styled.div`
 	/* margin-top: 1em;
 	margin-bottom: 1em; */
-	height: 64px;
+	height: 128px;
 
-	@media ${media.medium}{
-		/* height: 128px */
-	}
+	@media (max-width: 779px) and (min-width: 564px){
+    	height: 128px
+  	}
+
+  @media (max-width: 563px){
+    height: 64px;
+  }
 `
 
 const Logo = styled.img`
@@ -28,7 +32,7 @@ const Logo = styled.img`
 `
 
 const MyHeader = props => {
-	return(
+	return (
 		<SiteHeader>
 			{/* <a href="/"><Logo src={logo}></Logo></a> */}
 		</SiteHeader>

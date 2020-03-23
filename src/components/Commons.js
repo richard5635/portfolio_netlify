@@ -36,12 +36,31 @@ ol {
 }
 `
 export const StyledLink = styled(Link)`
-  color: ${colors.grey400};
-  transition: 0.3s;
+  color: ${colors.black};
+  transition: 0.25s;
 
   &:hover {
-    color: ${colors.grey300};
+    color: ${colors.blue};
   }
+`
+
+export const StyledUrl = styled.a`
+  color: ${colors.black};
+  transition: 0.25s;
+
+  &:hover {
+    color: ${colors.blue};
+  }
+`
+export const TextUrl = styled.a`
+  color: ${colors.black};
+  text-decoration: underline;
+
+
+  &:hover {
+    color: ${colors.blue};
+  }
+  
 `
 
 export const Text = styled.p`

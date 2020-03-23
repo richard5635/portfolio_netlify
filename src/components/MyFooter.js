@@ -6,14 +6,8 @@ import { colors } from '../tokens'
 
 const FooterWrapper = styled.footer`
 	border-top: solid 1px ${colors.grey100};
-  text-align: left;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  background-color: ${colors.white};
-  color: ${colors.primary};
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+  margin: 128px auto;
+  text-align: center;
 
   & nav {
     display: flex;
@@ -26,16 +20,6 @@ const FooterWrapper = styled.footer`
       flex: 1 auto;
       display: inline-flex;
       flex-direction: column;
-    }
-  }
-
-  & a {
-    color: ${colors.textLightest};
-    font-weight: bold;
-
-    &:hover {
-      color: ${colors.textLightestHover};
-      /* border-bottom: 1px dotted ${colors.textLightestHover}; */
     }
   }
 
@@ -72,6 +56,18 @@ const FooterWrapper = styled.footer`
     .footer-col:first-child {
       width: 100%;
     }
+  }
+`
+
+const MediaLinks = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const MediaLink = styled.a`
+  margin-right: 32px;
+  & :last-child{
+    margin-right: 0px;
   }
 `
 
@@ -112,40 +108,24 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      <nav>
-        <div className="footer-col">
-          <h5 className="footer-title">
-            {authorName} © {new Date().getFullYear()}
-          </h5>
-          {/* <p className="footer-item-text">
-            Built with{' '}
-            <a className="footer-link" href="https://www.gatsbyjs.org">
-              Gatsby
-            </a>
-            .
-          </p>
-          <p className="footer-item-text">
-            Theme using{' '}
-            <a
-              className="footer-link"
-              href="https://github.com/maxpou/gatsby-starter-morning-dew"
-            >
-              gatsby-starter-morning-dew
-            </a>
-            .
-          </p>
-          <p className="footer-item-text">
-            Hosted with <span className="footer-heart" role="img" aria-label="Love">❤</span> by{' '}
-            <a className="footer-link" href={websiteHost.url}>
-              {websiteHost.name}
-            </a>
-            .
-          </p> */}
-        </div>
-        {/* {footerLinks.map((column, i) => {
-          return <FooterColumn column={column} key={`footer-column-${i}`} />
-        })} */}
-      </nav>
+      <h3>
+        Let's connect
+      </h3>
+      <div className="spacer16px"/>
+      <p>
+        Get in touch for opportunities or just a hi!
+      </p>
+      <div className="spacer16px"/>
+      <MediaLinks>
+        <MediaLink href="">Linkedin</MediaLink>
+        <MediaLink href="">Github</MediaLink>
+        <MediaLink href="">Dribbble</MediaLink>
+      </MediaLinks>
+      <div className="spacer16px"/>
+      <p>
+        richard.sh093@gmail.com
+      </p>
+
     </FooterWrapper>
   )
 }

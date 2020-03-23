@@ -8,26 +8,38 @@ const Card = styled.div`
 	/* Set to be left aligned */
 	float: left;
 	/* background-color: ${colors.grey100}; */
-	border-style: solid;
-	border-color: ${colors.grey100} ${colors.grey100} black ${colors.grey100};
-	border-width: 1px 1px 8px 1px;
+	/* border-style: solid; */
+	/* border-color: ${colors.grey100} ${colors.grey100} black ${colors.grey100}; */
+	/* border-width: 1px 1px 8px 1px; */
 	min-width: 250px;
 	width: 30%;
-	padding: 8px;
+	/* padding: 8px; */
 	/* width: 100%; */
-	margin-bottom: 16px;
-	margin-right: 16px;
+	margin-bottom: 32px;
+	margin-right: 32px;
+
+	
+
+	& a{
+		text-decoration: none;
+	}
 
 	@media (min-width: 1045px){
-
+		& :nth-child(3n){
+			margin-right: 0px;
+		}
 	}
 
-	@media (max-width: 1044px) and (min-width: 635px){
+	@media (max-width: 1044px) and (min-width: 600px){
 		width: 46%;
+		& :nth-child(2n){
+			margin-right: 0px;
+		}
 	}
 
-	@media (max-width: 634px){
-		width: 95%;
+	@media (max-width: 600px){
+		width: 100%;
+		margin-right: 0px;
 	}
 
 	/* if size > 825, set right margin on everything but third article. */
@@ -54,28 +66,28 @@ const CardLink = styled(Link)`
 `
 
 const CardTitle = styled.h5`
-	font-size: 1em;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 17px;
 	margin: 0;
-	padding-top: 1em;
+	margin-top: 16px;
 `
 
 const CardSubtitle = styled.h4`
-	font-size: 28px;
-	margin: 0;
-	padding-top: 0.4em;
-	padding-bottom: 0.4em;
 
 	@media (min-width: 1045px){
-		height: 4.8em;
+		
 	}
 
 
 	@media (max-width: 1044px) and (min-width: 635px){
-		height: 3.2em;
+		
 	}
 
 	@media (max-width: 634px){
-		font-size: 24px;
+		
 	}
 `
 
@@ -88,6 +100,7 @@ const ArticleCard = props => {
 				<CardImage style={{ backgroundImage: `url("${cover}")` }}></CardImage>
 				<div className="article-card">
 					<CardTitle>{title}</CardTitle>
+					<div className="spacer8px"/>
 					<CardSubtitle>{subtitle}</CardSubtitle>
 				</div>
 			</CardLink>
