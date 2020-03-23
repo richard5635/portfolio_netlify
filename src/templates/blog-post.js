@@ -4,20 +4,22 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
+import Segment from '../components/Segment'
 import Hero from '../components/Hero'
 import Article from '../components/Article'
 import BackToTop from '../components/Buttons/BackToTop'
 import PrevNextPost from '../components/PrevNextPost'
 import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
+import MyFooter from '../components/MyFooter'
 
 // Richard
 import BackLink from '../components/Link/BackLink'
 import Spacer from '../components/Spacer/Spacer'
 
 
-const ContentWrapper = styled.div`
-  max-width: 764px;
+const SegmentArticle = styled(Segment)`
+  max-width: 768px;
   margin: auto;
 `
 
@@ -37,6 +39,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         {/* <div className="ui stackable grid">
         </div> */}
+        <div className="spacerRespBig"/>
 
         <SEO
           title={post.frontmatter.title}
@@ -53,47 +56,39 @@ class BlogPostTemplate extends React.Component {
           isBlogPost
         />
 
-        <Wrapper>
-          <div className="ui stackable grid article">
-            <div className="twelve wide column">
-              <BackLink />
-              <PostTitle>{post.frontmatter.title}</PostTitle>
-              <h5 className = "serif">{post.frontmatter.subtitle}</h5>
-            </div>
-          </div>
-        </Wrapper>
+        <SegmentArticle>
+          <BackLink />
+          <h1>{post.frontmatter.title}</h1>
+          <h4 className="serif">{post.frontmatter.subtitle}</h4>
+        </SegmentArticle>
 
-        <Wrapper><div className="ui stackable grid">
-          <div className="sixteen wide column">
-            {/* <h4>{post.frontmatter.description}</h4> */}
-            <Hero
-              heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-              title={post.frontmatter.title}
-            />
-          </div>
-        </div>
-        </Wrapper>
+        <SegmentArticle>
+          {/* <h4>{post.frontmatter.description}</h4> */}
+          <Hero
+            heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
+            title={post.frontmatter.title}
+          />
+        </SegmentArticle>
 
-        <Wrapper>
-          <ContentWrapper>
-            <Article post={post} />
-          </ContentWrapper>
-        </Wrapper>
+        <SegmentArticle>
+          <Article post={post} />
+        </SegmentArticle>
 
-        {/* <Wrapper> */}
-          {/* <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} /> */}
-          {/* <PrevNextPost previous={previous} next={next} /> */}
-        {/* </Wrapper> */}
+        {/* <SegmentArticle> */}
+        {/* <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} /> */}
+        {/* <PrevNextPost previous={previous} next={next} /> */}
+        {/* </SegmentArticle> */}
 
-        <Spacer/>
+        <Spacer />
 
-        <Wrapper>
-          <div className="ui stackable grid article">
-            <BackLink />
-          </div>
-        </Wrapper>
-        
-        <Spacer/>
+        <SegmentArticle>
+          <BackLink />
+        </SegmentArticle>
+
+        <Spacer />
+        <SegmentArticle>
+          <MyFooter/>
+        </SegmentArticle>
 
         {/* Back to top button */}
         {/* <BackToTop/> */}

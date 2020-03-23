@@ -5,7 +5,6 @@ import useSiteMetadata from '../hooks/use-site-config'
 import { colors } from '../tokens'
 
 const FooterWrapper = styled.footer`
-	border-top: solid 1px ${colors.grey100};
   margin: 128px auto;
   text-align: center;
 
