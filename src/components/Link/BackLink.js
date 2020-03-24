@@ -7,7 +7,6 @@ import { colors, media } from '../../tokens'
 // Richards
 
 const StyledBackLink = styled(Link)`
-	font-family: "Lato", sans-serif;
 	color: ${colors.grey400};
 	transition: 0.3s;
 
