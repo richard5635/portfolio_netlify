@@ -16,12 +16,16 @@ const SiteHeader = styled.div`
 	margin-top: 16px;
 
 	@media (max-width: 779px) and (min-width: 564px){
-    	/* height: 128px */
+		/* height: 128px */
+		margin-left: 24px;
+		margin-top: 12px;
   	}
 
-  @media (max-width: 563px){
-    /* height: 64px; */
-  }
+  	@media (max-width: 563px){
+		/* height: 64px; */
+		margin-left: 16px;
+		margin-top: 8px;
+  	}
 `
 
 const Logo = styled.img`
@@ -35,7 +39,7 @@ const Logo = styled.img`
 	}
 `
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
 	text-decoration: none;
 	transition: 0;
 
@@ -52,7 +56,7 @@ const MyHeader = props => {
 	return (
 		<SiteHeader>
 			{/* <a href="/"><Logo src={logo}></Logo></a> */}
-			<LogoLink>
+			<LogoLink to="/">
 				<LogoText>Richard Hartanto</LogoText>
 			</LogoLink>
 		</SiteHeader>
