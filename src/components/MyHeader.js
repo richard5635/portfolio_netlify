@@ -12,19 +12,25 @@ const SiteHeader = styled.div`
 	top: 0;
 	position: fixed;
 	z-index: 10;
-	margin-left: 32px;
-	margin-top: 16px;
+	/* margin-left: 24px; */
+	/* margin-top: 16px; */
+	
+
+	padding: 24px 32px 24px 32px;
+
+	/* border: solid; */
+	background: rgba(240, 242, 243, 0.7);
 
 	@media (max-width: 779px) and (min-width: 564px){
 		/* height: 128px */
-		margin-left: 24px;
-		margin-top: 12px;
+		width: 100%;
+		padding: 20px 24px 20px 24px;
   	}
 
   	@media (max-width: 563px){
 		/* height: 64px; */
-		margin-left: 16px;
-		margin-top: 8px;
+		width: 100%;
+		padding: 16px 16px 16px 16px;
   	}
 `
 
@@ -49,7 +55,7 @@ const LogoLink = styled(Link)`
 `
 
 const LogoText = styled.div`
-	line-height: 52px;
+	line-height: 24px;
 `
 
 const MyHeader = props => {
