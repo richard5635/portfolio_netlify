@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
+import MyHeader from '../components/MyHeader'
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
 import Segment from '../components/Segment'
@@ -39,6 +40,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         {/* <div className="ui stackable grid">
         </div> */}
+        <MyHeader/>
         <div className="spacerRespBig"/>
 
         <SEO

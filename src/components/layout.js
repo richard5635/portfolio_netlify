@@ -13,7 +13,6 @@ import '../css/semantic.min.css'
 import '../css/styles.css'
 
 import MyHeader from './MyHeader'
-import MyFooter from './MyFooter'
 
 const SiteContent = styled.div`
   margin: 0 0;
@@ -37,7 +36,7 @@ class Template extends React.Component {
         </Helmet>
         <GlobalStyle />
         {/* <Header /> */}
-        <MyHeader />
+        {/* <MyHeader /> */}
         <SiteContent>{children}</SiteContent>
         {/* <Footer /> */}
         {/* <MyFooter />s */}
