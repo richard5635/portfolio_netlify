@@ -57,7 +57,7 @@ class BlogPostTemplate extends React.Component {
         />
 
         <SegmentArticle>
-          <BackLink />
+          {/* <BackLink /> */}
           <h1>{post.frontmatter.title}</h1>
           <h4 className="serif">{post.frontmatter.subtitle}</h4>
         </SegmentArticle>

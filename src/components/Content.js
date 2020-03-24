@@ -106,38 +106,36 @@ const ContentBody = styled.div`
   }
 `
 
+const SubHeading = styled.h5`
+  color: rgba(121, 121, 121, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`
+
 class Content extends React.Component {
   render() {
     const { title, subtitle, description, dateDuration, targetAudience, myRole, myRoleDesc, content, date, tags } = this.props
 
     return (
       <section>
-        <div className="ui stackable grid">
-          <div className="sixteen wide column">
-            <p>{description}</p>
-            {(tags || date) && <ContentHeader date={date} tags={tags} />}
-          </div>
-        </div>
-        <div class="ui stackable grid">
-          <div class="eight wide column">
-            <h2>Target Audience</h2>
-            <p>{targetAudience}</p>
-            <h2>Date and Work Duration</h2>
-            <p>{dateDuration}</p>
-          </div>
-          <div class="eight wide column">
-            <h2>My Role</h2>
-            <h3>{myRole}</h3>
-            <p>{myRoleDesc}</p>
-          </div>
-        </div>
-        <div className="ui stackable grid">
-          <div className="sixteen wide column">
-            <ContentBody>
-              <MDXRenderer>{content}</MDXRenderer>
-            </ContentBody>
-          </div>
-        </div>
+        <SubHeading>Overview</SubHeading>
+        <p>{description}</p>
+        {(tags || date) && <ContentHeader date={date} tags={tags} />}
+
+        <SubHeading>Target Audience</SubHeading>
+        <p>{targetAudience}</p>
+
+        <SubHeading>Date and Work Duration</SubHeading>
+        <p>{dateDuration}</p>
+        
+        <SubHeading>Role</SubHeading>
+        <p><b>{myRole}</b></p>
+        <p>{myRoleDesc}</p>
+        
+
+        <ContentBody>
+          <MDXRenderer>{content}</MDXRenderer>
+        </ContentBody>
       </section>
     )
   }

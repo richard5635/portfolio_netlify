@@ -4,17 +4,29 @@ import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
 import { colors, media } from '../tokens'
 
+// Article Image
 const HeroContainer = styled.div`
   position: relative;
   display: table;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 64px auto;
   width: 100%;
   height: 400px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-width: 780px) and (max-width: 1023px){
+    margin: 64px auto;
+  }
+
+  @media (max-width: 779px) and (min-width: 564px){
+    margin: 32px auto;
+  }
+
+  @media (max-width: 563px){
+    margin: 32px auto;
+  }
 
   @media ${media.xlarge} {
   }
