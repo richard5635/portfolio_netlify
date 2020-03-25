@@ -23,42 +23,67 @@ createdDate: '2019-05-01'
 updatedDate: '2019-05-01'
 ---
 
-## Hello, world!
+## The Team
 
-Thanks to MDX, It is now possible to add JSX in Markdown! Below is an example of JSX embedded in Markdown. <br />
-
-> MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast 🚀.
-
-
-**Example:**
-
-<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
-  <h3>This is JSX in Markdown</h3>
-  {console.log('hello MDX')}
-</div>
-
-Code: what the
-
-```jsx
-<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
-  <h3>This is JSX in Markdown</h3>
-  {console.log('hello MDX')}
-</div>
-```
+The development was led by Minori Manabe, who came up with the concept. She also made the sensor, physical props and coded the data transfer between Arduino and Unity. 
+Takamine Wataru joined the team as the natural language processing specialist. He gathered and made a large database of phrases extracted from Aozora Bunko, which is then extracted for the front end.
 
 
-## How-to?
+## Goal
 
-```jsx{5}
-import MySuperComponent from '../path/to/MySuperComponent'
+Improve the first version of In Wo Fumu.
+Provide an experience even closer to that of a rapper, while appreciating literatures where the phrases are quoted from.
 
-# Some text in Markdown
+---
 
-<MySuperComponent />
+## Ideation
 
-other text in markdown
-```
+After Seisakuten 2018 around February 2019, Minori invited me to make an improved version of In Wo Fumu for a famous art exhibition. Then the three of us gathered for a review and to propose improvements based on feedback.
 
-## Read more
+> I forgot which part rhymed to the previous phrase.  
+> The number of phrases provided are too little.  
+> It's hard to recognize the rhymes from reading Kanji.  
+> I can't read the phrases due to my shadow blocking the projector.  
+> I want to feel more like a rapper.
 
-👉 https://mdxjs.com/
+The main pain point from the first installation was the lack of readability. Rhyming in Japanese is normally decided on whether two phrases have a hiragana sequence with the same vowels. We chose to display kanji that disappears when stepped, which demanded unnecessary cognitive load.
+Based on the main feedbacks above, we decided what to improve from the first version using each time that we had.
+
+---
+
+## Development
+
+Starting the development in March 2019, we focused on increasing the number of phrases and improving the phrase readability. 
+
+#### More Robust sensor
+
+Receiving audiovisual feedback from a physical action is the main focus of this experience. 
+Therefore, here we have to ensure a seamless and fun interaction. We used an electronic switch under a soft urethane foam to receive haptic input. 
+Then, noticed that the soft material deforms permanently, leaving the switch to protrude.
+We decided to use a flat and robust sensor.
+
+#### Richer Collection of Phrases
+Our team member Takamine managed to collect a database of thirty thousand phrases extracted from Aozora Bunko based on the speech pattern from Twitter and other conditions. 
+With a huge database of sophisticated phrases, users can produce beautiful raps without much effort.
+
+#### Extra Displays Solve Occlusion and Cognitive Load
+To solve the problem of shadow blocking the texts, we planned to use two projectors mapped on the same area from opposing sides. 
+This would retain the text display in case one side of the projector light is blocked by human body.
+So that users do not have to remember phrases they stepped on, we decided to add an extra display on a wall so that people can look back which phrases they stepped on, included with a highlight of which part of the phrase rhymes.
+The development of the front end took two months, since I only worked on the project around five hours per week.
+
+---
+
+## Demo Video
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B82tHKb6g7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+A lot of people came to the exhibition, and we received a lot of feedback, which are more positive than the one we had before. 
+Lots of thanks to Minori Manabe and Takamine Wataru for the opportunity to work on this installation again!
+
+---
+
+## Achievements
+
+We won the Wacoal Study Hall Kyoto Honorable Mention ( ワコールスタディホール京都奨励賞 ), meaning that my team will be brushing up this work again for an upcoming exhibition! 
+Our work was also nominated in the 25th Student CG Contest.
