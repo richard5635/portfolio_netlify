@@ -30,6 +30,7 @@ const ContentBody = styled.div`
 
     &.anchor,
     &.gatsby-resp-image-link {
+      display: none;
       border: none;
     }
   }
