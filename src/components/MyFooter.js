@@ -116,9 +116,9 @@ const Footer = () => {
       </p>
       <div className="spacer16px"/>
       <MediaLinks>
-        <MediaLink href="">Linkedin</MediaLink>
-        <MediaLink href="">Github</MediaLink>
-        <MediaLink href="">Dribbble</MediaLink>
+        <MediaLink href="https://www.linkedin.com/in/richardsh/">Linkedin</MediaLink>
+        <MediaLink href="https://github.com/richard5635">Github</MediaLink>
+        <MediaLink href="https://dribbble.com/richard5635">Dribbble</MediaLink>
       </MediaLinks>
       <div className="spacer16px"/>
       <p>
