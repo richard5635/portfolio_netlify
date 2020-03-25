@@ -4,28 +4,40 @@ import ContentHeader from './ContentHeader'
 import { colors } from '../tokens'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
+
 const ContentBody = styled.div`
-  line-height: 1.6;
 
   & > h2 {
-    padding-top: 3rem;
-    margin-top: 3rem;
-    border-top: 1px solid #ececec;
+    margin-bottom: 32px;
   }
 
   & > h3 {
-    padding-top: 3rem;
+    margin-bottom: 32px;
+  }
+
+  & > h4 {
+    margin-bottom: 16px;
   }
 
   & > p {
-    margin: 1em 0 0 0;
+    margin-bottom: 32px;
+  }
+
+  & > .gatsby-resp-iframe-wrapper {
+    margin-bottom: 32px;
+  }
+
+  & > hr {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    height: 1px;
+    background-color: rgba(151, 151, 151, 0.8);
+    border: none;
   }
 
   & a {
-    border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
 
     &:hover {
-      border-bottom-style: solid;
     }
 
     &.anchor,
@@ -36,11 +48,12 @@ const ContentBody = styled.div`
   }
 
   & > blockquote {
+    font-size: 21px;
+    line-height: 42px;
     box-sizing: border-box;    
-    background-color: #f7f7f7;
-    border-left: 5px solid rgb(244, 213, 36);
+    border-left: 8px solid rgba(0, 0, 0, 0.8);
     margin: 30px 0px;
-    padding: 5px 20px;
+    padding: 5px 64px;
     border-radius: 0 8px 8px 0;
   }
 
@@ -107,6 +120,13 @@ const ContentBody = styled.div`
   }
 `
 
+const Divider = styled.div`
+  display: block;
+  height: 1px;
+  border-bottom: 1px solid;
+  border-color: rgba(151, 151, 151, 0.8);
+`
+
 const SubHeading = styled.h5`
   color: rgba(121, 121, 121, 0.8);
   text-transform: uppercase;
@@ -143,6 +163,9 @@ class Content extends React.Component {
           </div>
         </div>
 
+        <div className="spacer64px"/>
+        <Divider />
+        <div className="spacer64px"/>
 
         <ContentBody>
           <MDXRenderer>{content}</MDXRenderer>
