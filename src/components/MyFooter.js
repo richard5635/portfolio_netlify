@@ -8,6 +8,18 @@ const FooterWrapper = styled.footer`
   margin: 128px auto;
   text-align: center;
 
+  @media screen and (min-width: 780px) and (max-width: 1023px){
+      
+  }
+
+  @media screen and (max-width: 779px) and (min-width: 564px){
+    margin: 64px auto;
+  }
+
+  @media screen and (max-width: 563px){
+    margin: 64px auto;
+  }
+
   & nav {
     display: flex;
     flex-flow: row wrap;
@@ -110,17 +122,17 @@ const Footer = () => {
       <h3>
         Let's connect
       </h3>
-      <div className="spacer16px"/>
+      <div className="spacer16px" />
       <p>
         Get in touch for opportunities or just a hi!
       </p>
-      <div className="spacer16px"/>
+      <div className="spacer16px" />
       <MediaLinks>
         <MediaLink href="https://www.linkedin.com/in/richardsh/">Linkedin</MediaLink>
         <MediaLink href="https://github.com/richard5635">Github</MediaLink>
         <MediaLink href="https://dribbble.com/richard5635">Dribbble</MediaLink>
       </MediaLinks>
-      <div className="spacer16px"/>
+      <div className="spacer16px" />
       <p>
         richard.sh093@gmail.com
       </p>

@@ -9,6 +9,18 @@ const ContentBody = styled.div`
 
   & > h2 {
     margin-bottom: 32px;
+
+    @media screen and (min-width: 780px) and (max-width: 1023px){
+      
+    }
+
+    @media screen and (max-width: 779px) and (min-width: 564px){
+      
+    }
+
+    @media screen and (max-width: 563px){
+
+    }
   }
 
   & > h3 {
@@ -33,6 +45,20 @@ const ContentBody = styled.div`
     height: 1px;
     background-color: rgba(151, 151, 151, 0.8);
     border: none;
+
+    @media screen and (min-width: 780px) and (max-width: 1023px){
+      
+    }
+
+    @media screen and (max-width: 779px) and (min-width: 564px){
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media screen and (max-width: 563px){
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
   }
 
   & a {
@@ -48,13 +74,25 @@ const ContentBody = styled.div`
   }
 
   & > blockquote {
-    font-size: 21px;
-    line-height: 42px;
+    color: rgba(0, 0, 0, 0.8);
+
     box-sizing: border-box;    
     border-left: 8px solid rgba(0, 0, 0, 0.8);
     margin: 30px 0px;
     padding: 5px 64px;
     border-radius: 0 8px 8px 0;
+
+    @media screen and (min-width: 780px) and (max-width: 1023px){
+      padding: 5px 32px;
+    }
+
+    @media screen and (max-width: 779px) and (min-width: 564px){
+      padding: 5px 16px;
+    }
+
+    @media screen and (max-width: 563px){
+      padding: 5px 16px;
+    }
   }
 
   & > blockquote p {

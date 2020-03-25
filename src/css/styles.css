@@ -46,6 +46,11 @@ h5 {
     line-height: 48px;
 }
 
+blockquote {
+    font-size: 21px;
+    line-height: 42px;
+}
+
 a {
     color: rgba(0,0,0,0.8);
     text-decoration: underline;
@@ -77,6 +82,16 @@ a:hover {
         font-size: 30px;
         line-height: 48px;
     }
+
+    h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    blockquote {
+        font-size: 18px;
+        line-height: 36px;
+    }
 }
 
 @media screen and (max-width: 779px) and (min-width: 564px){
@@ -99,6 +114,16 @@ a:hover {
         font-size: 30px;
         line-height: 48px;
     }
+
+    h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    blockquote {
+        font-size: 18px;
+        line-height: 36px;
+    }
 }
 
 @media screen and (max-width: 563px){
@@ -113,13 +138,23 @@ a:hover {
     }
 
     h2 {
-        font-size: 30px;
-        line-height: 48px;
+        font-size: 24px;
+        line-height: 42px;
     }
 
     h3 {
-        font-size: 30px;
-        line-height: 48px;
+        font-size: 24px;
+        line-height: 42px;
+    }
+
+    h4 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    blockquote {
+        font-size: 18px;
+        line-height: 36px;
     }
 }
 

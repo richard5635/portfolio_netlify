@@ -81,11 +81,9 @@ class BlogPostTemplate extends React.Component {
         {/* <PrevNextPost previous={previous} next={next} /> */}
         {/* </SegmentArticle> */}
 
-        <Spacer />
-
-        <SegmentArticle>
+        {/* <SegmentArticle>
           <BackLink />
-        </SegmentArticle>
+        </SegmentArticle> */}
 
         <Spacer />
         <SegmentArticle>
