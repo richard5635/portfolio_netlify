@@ -87,10 +87,12 @@ const ContentBody = styled.div`
     }
 
     @media screen and (max-width: 779px) and (min-width: 564px){
+      border-left: 4px solid rgba(0, 0, 0, 0.8);
       padding: 5px 16px;
     }
 
     @media screen and (max-width: 563px){
+      border-left: 4px solid rgba(0, 0, 0, 0.8);
       padding: 5px 16px;
     }
   }
