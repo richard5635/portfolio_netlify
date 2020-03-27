@@ -1,15 +1,27 @@
 ---
 title: "Big Test"
-slug: big-test
-date: 2018-01-03
-language: en
-generate-card: false
-targetAudience: "Meoneonoene"
+subtitle: 'Test01 Subtitle'
+description: "Test01 Dscription Test01 Dscription Test01 Dscription Test01 Dscription Test01 Dscription Test01 Dscription Test01 Dscription"
+projectType: "Side"
+targetAudience: 'Test01 TargetAudience'
+dateDuration: 'July 2010 - February 2011'
+myRole: 'Visual Designer'
+myRoleDesc: "Consultation, design, and printing"
+author: Richard Hartanto
 tags:
   - test
   - huge
   - no-cover
   - fake
+cover: cover.jpg
+image: cover.jpg
+bgColor: "#F0F0F0"
+draft: false
+slug: big-test
+date: 2012-01-01
+language: en
+generate-card: false
+createdDate: '2012-01-01'
 ---
 
 NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
