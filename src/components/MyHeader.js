@@ -56,6 +56,7 @@ const LogoLink = styled(Link)`
 
 const LogoText = styled.div`
 	line-height: 24px;
+	font-weight: 700;
 `
 
 const MyHeader = props => {
@@ -63,7 +64,7 @@ const MyHeader = props => {
 		<SiteHeader>
 			{/* <a href="/"><Logo src={logo}></Logo></a> */}
 			<LogoLink to="/">
-				<LogoText>Richard Hartanto</LogoText>
+				<LogoText>Richard Hartanto &mdash;</LogoText>
 			</LogoLink>
 		</SiteHeader>
 	)
