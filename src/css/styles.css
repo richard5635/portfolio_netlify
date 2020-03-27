@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: #F0F2F3;
+    background: rgb(240, 242, 243);
     font-family: 'Noto Serif JP', 'Times New Roman';
     font-size: 18px;
     line-height: 36px;
@@ -46,6 +46,11 @@ h5 {
     line-height: 48px;
 }
 
+p {
+    font-size: 18px;
+    line-height: 36px;
+}
+
 blockquote {
     font-size: 21px;
     line-height: 42px;
@@ -84,8 +89,13 @@ a:hover {
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 21px;
         line-height: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 36px;
     }
 
     blockquote {
@@ -120,6 +130,11 @@ a:hover {
         line-height: 30px;
     }
 
+    p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
     blockquote {
         font-size: 18px;
         line-height: 36px;
@@ -150,6 +165,11 @@ a:hover {
     h4 {
         font-size: 18px;
         line-height: 27px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 28px;
     }
 
     blockquote {
