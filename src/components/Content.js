@@ -61,6 +61,23 @@ const ContentBody = styled.div`
     }
   }
 
+  & ul {
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 779px){
+      line-height: 32px;
+    }
+  }
+
+  & li {
+    line-height: 40px;
+
+    @media screen and (max-width: 779px){
+      line-height: 32px;
+    }
+
+  }
+
   & a {
 
     &:hover {
@@ -103,19 +120,19 @@ const ContentBody = styled.div`
   }
 
   & .gatsby-highlight {
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 15px;
     line-height: 1.7;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: auto;
     tab-size: 1.5em;
-    margin: 1.5em 0em 1.5em 0;
+    margin: 2em 0em;
   }
 
   & .gatsby-highlight > pre {
     border: 0;
     margin: 0;
-    padding: 1;
+    padding: 1.2;
   }
 
   & .gatsby-highlight-code-line {

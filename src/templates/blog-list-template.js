@@ -83,6 +83,40 @@ class BlogList extends React.Component {
               WORKS
             </h5>
             <CardGrid >
+              {posts.map(post => {
+                const props = {
+                  title: post.node.frontmatter.title,
+                  subtitle: post.node.frontmatter.subtitle,
+                  cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+                  slug: post.node.frontmatter.slug
+                };
+                return <ArticleCard key={props.slug} {...props} />
+              })}
+            </CardGrid>
+          </WorkBox>
+
+          <div className="spacer32px" />
+          <Divider />
+          <div className="spacer32px" />
+
+        </Segment>
+
+        <Segment>
+          <CaptionBox>
+            <h3>
+              Side Projects
+            </h3>
+            <div className="spacer16px" />
+            <p>
+              I love creating digital products that connect to reality.
+            </p>
+          </CaptionBox>
+          <Divider />
+          <WorkBox>
+            <h5>
+              WORKS
+            </h5>
+            <CardGrid >
               {sideProjectPosts.map(post => {
                 const props = {
                   title: post.node.frontmatter.title,
