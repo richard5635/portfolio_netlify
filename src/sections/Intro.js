@@ -33,18 +33,21 @@ const AvatarBox = styled.div`
 
 const IntroTextBox = styled.div`
 	max-width: 700px;
+	width:75%;
 
 	@media (min-width: 780px) and (max-width: 1023px){
 		max-width: 540px;
 	}
 	
 	@media (max-width: 779px) and (min-width: 564px){
-    max-width: 480px;
-  }
+		max-width: 480px;
+		width: auto;
+  	}
 
-  @media (max-width: 563px){
-    max-width: 400px;
-  }
+  	@media (max-width: 563px){
+		max-width: 400px;
+		width: auto;
+  	}
 `
 
 import Segment from '../components/Segment'
