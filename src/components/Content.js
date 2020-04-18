@@ -132,7 +132,7 @@ const ContentBody = styled.div`
   & .gatsby-highlight > pre {
     border: 0;
     margin: 0;
-    padding: 1.2;
+    padding: 1;
   }
 
   & .gatsby-highlight-code-line {
