@@ -26,7 +26,7 @@ export default {
   primary: colors.black,
   primaryAlpha: `rgba(32, 35, 42, 0.85)`,
   text: colors.black,
-  background: '#f4f8fb',
+  background: '#f0f2f3',
   backgroundArticle: colors.white,
   heartFooter: 'red',
   highlight_code_oneline: '#fff9d9',
