@@ -8,7 +8,7 @@ import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 const ContentBody = styled.div`
 
   & > h2 {
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
 
     @media screen and (min-width: 780px) and (max-width: 1023px){
       
@@ -24,15 +24,15 @@ const ContentBody = styled.div`
   }
 
   & > h3 {
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
   }
 
   & > h4 {
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
   }
 
   & > p {
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
   }
 
   & > .gatsby-resp-iframe-wrapper {

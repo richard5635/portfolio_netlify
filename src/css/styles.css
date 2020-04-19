@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,500,600&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -17,13 +17,17 @@ h1 {
     font-size: 48px;
     font-weight: 400;
     line-height: 84px;
-    
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
 h2 {
+    font-family: 'Helvetica', 'Arial';
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 51px;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
 h3 {
@@ -31,12 +35,17 @@ h3 {
     font-weight: 100;
     font-size: 36px;
     line-height: 43px;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
 h4 {
-    font-weight: 400;
-    font-size: 21px;
+    /* font-family: 'Helvetica', 'Arial'; */
+    font-weight: 600;
+    font-size: 24px;
     line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
 h5 {
@@ -49,6 +58,8 @@ h5 {
 p {
     font-size: 18px;
     line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 36px;
 }
 
 blockquote {
@@ -76,26 +87,36 @@ a:hover {
         font-size: 42px;
         font-weight: 400;
         line-height: 80px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 36px;
         line-height: 48px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     h3 {
-        font-size: 30px;
+        font-size: 36px;
         line-height: 48px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     h4 {
-        font-size: 21px;
+        font-size: 24px;
         line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     p {
         font-size: 18px;
         line-height: 36px;
+        margin-top: 0;
+        margin-bottom: 36px;
     }
 
     blockquote {
@@ -113,26 +134,36 @@ a:hover {
     h1 {
         font-size: 36px;
         line-height: 72px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 48px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     h3 {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 48px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     h4 {
         font-size: 18px;
         line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     p {
-        font-size: 14px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: 0;
+        margin-bottom: 36px;
     }
 
     blockquote {
@@ -150,26 +181,36 @@ a:hover {
     h1 {
         font-size: 36px;
         line-height: 72px;
+        margin-top: 0;
+        margin-bottom: 12px;
     }
 
     h2 {
         font-size: 24px;
         line-height: 42px;
+        margin-top: 0;
+        margin-bottom: 12px;
     }
 
     h3 {
         font-size: 24px;
         line-height: 42px;
+        margin-top: 0;
+        margin-bottom: 12px;
     }
 
     h4 {
         font-size: 18px;
         line-height: 27px;
+        margin-top: 0;
+        margin-bottom: 12px;
     }
 
     p {
         font-size: 14px;
         line-height: 28px;
+        margin-top: 0;
+        margin-bottom: 24px;
     }
 
     blockquote {
