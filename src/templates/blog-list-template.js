@@ -67,7 +67,7 @@ class BlogList extends React.Component {
           <Intro />
         </Segment>
 
-        <Segment>
+        {/* <Segment>
           <CaptionBox>
             <h3>
               Side Projects
@@ -98,7 +98,7 @@ class BlogList extends React.Component {
           <Divider />
           <div className="spacer32px" />
 
-        </Segment>
+        </Segment> */}
 
         <Segment>
           <CaptionBox>
