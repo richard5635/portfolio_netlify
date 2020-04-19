@@ -4,6 +4,8 @@ import ContentHeader from './ContentHeader'
 import { colors } from '../tokens'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
+import ImageCard from './ImageCard'
+
 
 const ContentBody = styled.div`
 
@@ -189,6 +191,7 @@ const SubHeading = styled.h5`
   text-transform: uppercase;
   letter-spacing: 1px;
 `
+
 
 class Content extends React.Component {
   render() {

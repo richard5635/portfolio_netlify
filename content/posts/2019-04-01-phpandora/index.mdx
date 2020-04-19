@@ -23,6 +23,15 @@ createdDate: '2019-04-01'
 updatedDate: '2019-04-01'
 ---
 
+import ImageCard from '../../../src/components/ImageCard'
+
+export const props01 = {
+  images : ['https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80','https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&w=1000&q=80'],
+  caption : 'The caption goes here'
+}
+
+<ImageCard {...props01}/>
+
 ## Concept
 
 > To immerse visitors to the beautiful night scene of Pandora.
@@ -32,11 +41,16 @@ This led to the decision of an immersive interactive storytelling.
 I chose to use a dark room projection, aiming for "instagram-worthiness" and non-wearable experience. 
 Visitors interact by using sensors that would control the bioluminescence of the flora in the scene.
 
+<img src="./chart02.png"/>
+
+
 ## Interaction Design
 
 I chose Leap Motion as an input device to maintain the level of immersion. 
 Placed in the room's center, interaction with this hand-tracking device would feel like magic for those who are new to it. 
 Also, the visitor would stay within the proximity of the device to interact, keeping them from breaking the immersion by moving too close to the walls.
+
+
 
 #### Experience Scenario
 
