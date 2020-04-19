@@ -72,7 +72,6 @@ class BlogList extends React.Component {
             <h3>
               Side Projects
             </h3>
-            <div className="spacer16px" />
             <p>
               I love creating digital products that connect to reality.
             </p>
@@ -106,7 +105,6 @@ class BlogList extends React.Component {
             <h3>
               Side Projects
             </h3>
-            <div className="spacer16px" />
             <p>
               I love creating digital products that connect to reality.
             </p>
@@ -140,7 +138,6 @@ class BlogList extends React.Component {
             <h3>
               Internship Projects
             </h3>
-            <div className="spacer16px" />
             <p>
               I interned at several startups mainly focusing on front-end development.
             </p>

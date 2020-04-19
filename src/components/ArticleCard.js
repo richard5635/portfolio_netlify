@@ -67,16 +67,15 @@ const CardLink = styled(Link)`
 
 const CardTitle = styled.h5`
 	font-family: "Helvetica", "Arial", sans-serif;
-	font-weight: 400;
+	font-weight: 100;
 	text-transform: uppercase;
-	letter-spacing: 1px;
 	line-height: 17px;
 	margin: 0;
 	margin-top: 16px;
 `
 
 const CardSubtitle = styled.h4`
-
+	font-weight: 400;
 	@media (min-width: 1045px){
 		
 	}
