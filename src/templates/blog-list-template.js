@@ -50,15 +50,75 @@ const Divider = styled.div`
   border-color: rgba(151,151,151,0.8);
 `
 
+const Tags = ["Side", "School", "Internship"];
+const Tags2 = ["AR/VR", "Web", "Art", "Graphic Design", "Academic", "Hobby"];
+let filter = "Side";
+
+
 class BlogList extends React.Component {
+  posts = this.props.data.posts.edges;
+
+  constructor(props) {
+    super(props); // Forgot what this is
+    this.state = {
+      tags: ["Side", "School", "Internship"]
+    }
+  }
+
   render() {
+    
+
     const { title, description } = this.props.data.site.siteMetadata
-    const posts = this.props.data.posts.edges
     const { pageContext } = this.props
 
-    const sideProjectPosts = posts.filter(item => item.node.frontmatter.projectType == "Side");
-    const schoolProjectPosts = posts.filter(item => item.node.frontmatter.projectType == "School");
-    const internProjectPosts = posts.filter(item => item.node.frontmatter.projectType == "Internship");
+    const sideProjectPosts = this.posts.filter(item => item.node.frontmatter.projectType == "Side");
+    const schoolProjectPosts = this.posts.filter(item => item.node.frontmatter.projectType == "School");
+    const internProjectPosts = this.posts.filter(item => item.node.frontmatter.projectType == "Internship");
+
+
+    let filteredPosts = this.posts.filter(item => item.node.frontmatter.projectType == filter);
+
+    let changeFilter = (e, tagName) => {
+      e.preventDefault();
+      console.log("Change filter activated " + tagName);
+      
+      filteredPosts = this.posts.filter(item => item.node.frontmatter.projectType == tagName);
+      filteredPostsComp = (
+        <CardGrid >
+          {filteredPosts.map(post => {
+            const props = {
+              title: post.node.frontmatter.title,
+              subtitle: post.node.frontmatter.subtitle,
+              cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+              slug: post.node.frontmatter.slug
+            };
+            return <ArticleCard key={props.slug} {...props} />
+          })}
+        </CardGrid>
+      )
+    }
+
+    let handleClick = (e, tag) => {
+      e.preventDefault();
+      console.log('this is:', tag);
+    }
+
+    let conditionalText = <div>ConditionalText</div>
+
+
+
+    let filteredPostsComp =
+      <CardGrid >
+        {this.posts.map(post => {
+          const props = {
+            title: post.node.frontmatter.title,
+            subtitle: post.node.frontmatter.subtitle,
+            cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
+            slug: post.node.frontmatter.slug
+          };
+          return <ArticleCard key={props.slug} {...props} />
+        })}
+      </CardGrid>
 
     return (
       <Layout location={this.props.location}>
@@ -99,6 +159,27 @@ class BlogList extends React.Component {
           <div className="spacer32px" />
 
         </Segment> */}
+
+        {/* Filter Buttons: when the button is pressed, change the filter of the  */}
+        {/* Onclick non responsive 2020-09-04 */}
+        <Segment>
+          <CaptionBox>
+            {Tags.map(tag => {
+              return <button key={"btn_" + tag} onClick={(e) => changeFilter(e, tag)}>{tag}</button>
+            })}
+            <button></button>
+          </CaptionBox>
+        </Segment>
+        <Segment>
+          <WorkBox>
+            <h5>
+              FILTER
+            </h5>
+
+            {filteredPostsComp}
+          </WorkBox>
+        </Segment>
+
 
         <Segment>
           <CaptionBox>
@@ -206,9 +287,9 @@ class BlogList extends React.Component {
 
         <Segment>
 
-          <MyFooter/>
+          <MyFooter />
         </Segment>
-      <SEO />
+        <SEO />
 
         {/* <Hero title={title} subTitle={description} />
 
