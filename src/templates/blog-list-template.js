@@ -49,9 +49,31 @@ const Divider = styled.div`
   border-bottom: 1px solid;
   border-color: rgba(151,151,151,0.8);
 `
-
+const MediaLink = styled.a`
+  margin-right: 16px;
+  & :last-child{
+    margin-right: 0px;
+  }
+`
 
 // Change render either by checking state change or by using function. Which one works?
+
+class FilterButton extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isSelected: false
+    }
+  }
+
+  render () {
+    if(this.isSelected){
+      return <MediaLink style="color: blue" key={this.props.key} href="#" onClick={this.props.onClick}>{this.props.tag}</MediaLink>
+    } else {
+      return <MediaLink href="#" key={this.props.key} onClick={this.props.onClick}>{this.props.tag}</MediaLink>
+    }
+  }
+}
 
 class BlogList extends React.Component {
   posts = this.props.data.posts.edges;
@@ -60,7 +82,7 @@ class BlogList extends React.Component {
     super(props); // Forgot what this is
     this.state = {
       currTag: "All",
-      tags: ["All", "Side", "School", "Internship"]
+      tags: ["All", "Side Project", "School", "Internship"]
     }
   }
 
@@ -70,7 +92,8 @@ class BlogList extends React.Component {
     });
   }
 
-  handleClick = (tag) => {
+  handleClick = (tag, e) => {
+    e.preventDefault();
     let currTag = "";
     currTag = tag;
     this.setState({ currTag });
@@ -153,13 +176,19 @@ class BlogList extends React.Component {
         {/* Onclick non responsive 2020-09-04 */}
         {/* why this.handleClick.bind? */}
         <Segment>
+          <Divider />
+          <div className="spacer32px" />
+
           <CaptionBox>
             <h3>Works</h3>
             <h5>
               FILTER
             </h5>
+
+            {/* Refer to https://reactjs.org/docs/handling-events.html for the usage of handleClick */}
             {this.state.tags.map(tag => {
-              return <button key={"btn_" + tag} onClick={this.handleClick.bind(this, tag)}>{tag}</button>
+              // return <a href="#" key={"btn_" + tag} onClick={(e) => this.handleClick(tag, e)}>{tag}</a>
+              return <FilterButton href="#" key={"btn_" + tag} onClick={(e) => this.handleClick(tag, e)} tag={tag} />
             })}
             <button></button>
           </CaptionBox>
@@ -170,10 +199,12 @@ class BlogList extends React.Component {
 
             {filtPosts}
           </WorkBox>
+          <Divider />
+          <div className="spacer32px" />
         </Segment>
 
 
-        <Segment>
+        {/* <Segment>
           <CaptionBox>
             <h3>
               Side Projects
@@ -271,16 +302,16 @@ class BlogList extends React.Component {
           <Divider />
           <div className="spacer32px" />
 
-        </Segment>
+        </Segment> */}
 
         {/* <Segment>
           <RecentActivities />
         </Segment> */}
 
-        <Segment>
-
+        {/* <Segment>
           <MyFooter />
-        </Segment>
+        </Segment> */}
+
         <SEO />
 
         {/* <Hero title={title} subTitle={description} />
