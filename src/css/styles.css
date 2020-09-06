@@ -1,71 +1,71 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,500,600&display=swap');
 html {
     scroll-behavior: smooth;
+    font-size: 14pt;
 }
 
 body {
     background: rgb(240, 242, 243);
     font-family: 'Noto Serif JP', 'Times New Roman';
-    font-size: 18px;
-    line-height: 36px;
+    line-height: 1.5em;
     color: rgba(0, 0, 0, 0.8);
 }
 
 /* Typography */
 
 h1 {
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 84px;
+    line-height: 1.5em;
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
 }
 
 h2 {
     font-family: 'Helvetica', 'Arial';
-    font-size: 36px;
+    font-size: 1.60rem;
     font-weight: 600;
-    line-height: 51px;
+    line-height: 1.5em;
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-family: 'Helvetica', 'Arial';
     font-weight: 100;
-    font-size: 36px;
-    line-height: 43px;
+    font-size: 1.33rem;
+    line-height: 1.5em;
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
 }
 
 h4 {
     /* font-family: 'Helvetica', 'Arial'; */
     font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.14rem;
+    line-height: 1.5em;
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
 }
 
 h5 {
     font-family: 'Helvetica', 'Arial';
     font-weight: 100;
-    font-size: 14px;
+    font-size: 0.8rem;
     letter-spacing: 1px;
-    line-height: 48px;
+    line-height: 1.4em;
 }
 
 p {
-    font-size: 18px;
-    line-height: 36px;
+    font-size: 1rem;
+    line-height: 1.5em;
     margin-top: 0;
-    margin-bottom: 36px;
+    margin-bottom: 2rem;
 }
 
 blockquote {
-    font-size: 21px;
-    line-height: 42px;
+    font-size: 1.14rem;
+    line-height: 1.5em;
 }
 
 a {
@@ -88,139 +88,26 @@ a:hover {
 }
 
 @media screen and (min-width: 780px) and (max-width: 1023px){
-    h1 {
-        font-size: 42px;
-        font-weight: 400;
-        line-height: 80px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    h2 {
-        font-size: 36px;
-        line-height: 48px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    h3 {
-        font-size: 36px;
-        line-height: 48px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    h4 {
-        font-size: 24px;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    p {
-        font-size: 18px;
-        line-height: 36px;
-        margin-top: 0;
-        margin-bottom: 36px;
-    }
-
-    blockquote {
-        font-size: 18px;
-        line-height: 36px;
+    html{
+        font-size: 14pt;
     }
 }
 
 @media screen and (max-width: 779px) and (min-width: 564px){
-    body {
-        font-size: 14px;
-        line-height: 28px;
-    }
-
     h1 {
-        font-size: 36px;
-        line-height: 72px;
-        margin-top: 0;
-        margin-bottom: 18px;
+        font-size: 1.6rem;
     }
-
-    h2 {
-        font-size: 24px;
-        line-height: 48px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    h3 {
-        font-size: 24px;
-        line-height: 48px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    h4 {
-        font-size: 18px;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 32px;
-        margin-top: 0;
-        margin-bottom: 36px;
-    }
-
-    blockquote {
-        font-size: 18px;
-        line-height: 36px;
+    html{
+        font-size: 12pt;
     }
 }
 
 @media screen and (max-width: 563px){
-    body {
-        font-size: 14px;
-        line-height: 28px;
-    }
-    
     h1 {
-        font-size: 36px;
-        line-height: 72px;
-        margin-top: 0;
-        margin-bottom: 12px;
+        font-size: 1.6rem;
     }
-
-    h2 {
-        font-size: 24px;
-        line-height: 42px;
-        margin-top: 0;
-        margin-bottom: 12px;
-    }
-
-    h3 {
-        font-size: 24px;
-        line-height: 42px;
-        margin-top: 0;
-        margin-bottom: 12px;
-    }
-
-    h4 {
-        font-size: 18px;
-        line-height: 27px;
-        margin-top: 0;
-        margin-bottom: 12px;
-    }
-
-    p {
-        font-size: 14px;
-        line-height: 28px;
-        margin-top: 0;
-        margin-bottom: 24px;
-    }
-
-    blockquote {
-        font-size: 18px;
-        line-height: 36px;
+    html{
+        font-size: 12pt;
     }
 }
 

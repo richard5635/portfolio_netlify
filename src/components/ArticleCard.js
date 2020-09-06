@@ -73,7 +73,6 @@ const CardTitle = styled.h5`
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-weight: 100;
 	text-transform: uppercase;
-	line-height: 17px;
 	margin: 0;
 	margin-top: 16px;
 `
