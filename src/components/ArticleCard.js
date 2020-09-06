@@ -97,6 +97,9 @@ const CardSubtitle = styled.h4`
 const ArticleCard = props => {
 	const { title, subtitle, cover, slug } = props
 
+	// Add conditional to slug to turn it to URL Link?
+	// Successful in turning CardLink to google.com
+
 	return (
 		<Card>
 			<CardLink to={`/${slug}`}>
