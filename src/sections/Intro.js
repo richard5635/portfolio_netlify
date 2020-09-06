@@ -50,6 +50,18 @@ const IntroTextBox = styled.div`
   	}
 `
 
+const MediaLinks = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const MediaLink = styled.a`
+  margin-right: 16px;
+  & :last-child{
+    margin-right: 0px;
+  }
+`
+
 import Segment from '../components/Segment'
 import Container from '../components/Container'
 import avatar from '../../content/images/me.png'
@@ -65,6 +77,13 @@ class Intro extends React.Component {
 						<p>Richard Hartanto is a graduate student in UTokyo focusing on computer vision and interaction design.
 						Currently a computer vision intern at Pretia.
           Loves streaming comedy and relaxing in onsen.</p>
+		  				<div>
+							  <MediaLink target="_blank" href="https://www.linkedin.com/in/richardsh/">LinkedIn</MediaLink>
+							  <MediaLink target="_blank" href="https://medium.com/@richard.sh093">Medium</MediaLink>
+							  <MediaLink target="_blank" href="https://codepen.io/richard5635">CodePen</MediaLink>
+							  <MediaLink target="_blank" href="https://github.com/richard5635">GitHub</MediaLink>
+						</div>
+						<p>richard.sh093@gmail.com</p>
 					</IntroTextBox>
 					<AvatarBox>
 						<Avatar className="ui img" src={avatar}></Avatar>
