@@ -76,6 +76,16 @@ class BlogList extends React.Component {
     this.setState({ currTag });
   }
 
+  compareTags = (key, tags) => {
+    console.log(tags);
+    for(let i = 0; i < tags.length; i++){
+      if(tags[0] == key) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   render() {
 
 
@@ -88,7 +98,7 @@ class BlogList extends React.Component {
 
     const filtPosts =
       <CardGrid>
-        {this.posts.filter(item => this.state.currTag == "All" ? true : item.node.frontmatter.projectType == this.state.currTag).map(post => {
+        {this.posts.filter(item => this.state.currTag == "All" ? true : this.compareTags(this.state.currTag, item.node.frontmatter.tags)).map(post => {
           const props = {
             title: post.node.frontmatter.title,
             subtitle: post.node.frontmatter.subtitle,
