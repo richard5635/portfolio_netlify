@@ -7,7 +7,7 @@ import { colors, media } from '../tokens'
 const Card = styled.div`
 	/* Set to be left aligned */
 	float: left;
-	/* background-color: ${colors.grey100}; */
+	background-color: ${colors.white};
 	/* border-style: solid; */
 	/* border-color: ${colors.grey100} ${colors.grey100} black ${colors.grey100}; */
 	/* border-width: 1px 1px 8px 1px; */
@@ -58,6 +58,10 @@ const CardImage = styled.div`
   background-size: cover;
 `
 
+const CardTextbox = styled.div `
+	padding: 0 16px;
+`
+
 const CardLink = styled(Link)`
   color: ${colors.primary};
   &:hover {
@@ -97,11 +101,11 @@ const ArticleCard = props => {
 		<Card>
 			<CardLink to={`/${slug}`}>
 				<CardImage style={{ backgroundImage: `url("${cover}")` }}></CardImage>
-				<div className="article-card">
+				<CardTextbox>
 					<CardTitle>{title}</CardTitle>
 					<div className="spacer8px"/>
 					<CardSubtitle>{subtitle}</CardSubtitle>
-				</div>
+				</CardTextbox>
 			</CardLink>
 		</Card>
 	)
