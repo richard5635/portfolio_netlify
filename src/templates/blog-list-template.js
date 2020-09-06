@@ -50,10 +50,8 @@ const Divider = styled.div`
   border-color: rgba(151,151,151,0.8);
 `
 
-const Tags = ["Side", "School", "Internship"];
-const Tags2 = ["AR/VR", "Web", "Art", "Graphic Design", "Academic", "Hobby"];
-let filter = "Side";
 
+// Change render either by checking state change or by using function. Which one works?
 
 class BlogList extends React.Component {
   posts = this.props.data.posts.edges;
@@ -61,12 +59,25 @@ class BlogList extends React.Component {
   constructor(props) {
     super(props); // Forgot what this is
     this.state = {
-      tags: ["Side", "School", "Internship"]
+      currTag: "All",
+      tags: ["All", "Side", "School", "Internship"]
     }
   }
 
+  componentDidMount() {
+    this.setState({
+      currTag: "All"
+    });
+  }
+
+  handleClick = (tag) => {
+    let currTag = "";
+    currTag = tag;
+    this.setState({ currTag });
+  }
+
   render() {
-    
+
 
     const { title, description } = this.props.data.site.siteMetadata
     const { pageContext } = this.props
@@ -75,41 +86,9 @@ class BlogList extends React.Component {
     const schoolProjectPosts = this.posts.filter(item => item.node.frontmatter.projectType == "School");
     const internProjectPosts = this.posts.filter(item => item.node.frontmatter.projectType == "Internship");
 
-
-    let filteredPosts = this.posts.filter(item => item.node.frontmatter.projectType == filter);
-
-    let changeFilter = (e, tagName) => {
-      e.preventDefault();
-      console.log("Change filter activated " + tagName);
-      
-      filteredPosts = this.posts.filter(item => item.node.frontmatter.projectType == tagName);
-      filteredPostsComp = (
-        <CardGrid >
-          {filteredPosts.map(post => {
-            const props = {
-              title: post.node.frontmatter.title,
-              subtitle: post.node.frontmatter.subtitle,
-              cover: post.node.frontmatter.cover && post.node.frontmatter.cover.publicURL,
-              slug: post.node.frontmatter.slug
-            };
-            return <ArticleCard key={props.slug} {...props} />
-          })}
-        </CardGrid>
-      )
-    }
-
-    let handleClick = (e, tag) => {
-      e.preventDefault();
-      console.log('this is:', tag);
-    }
-
-    let conditionalText = <div>ConditionalText</div>
-
-
-
-    let filteredPostsComp =
-      <CardGrid >
-        {this.posts.map(post => {
+    const filtPosts =
+      <CardGrid>
+        {this.posts.filter(item => this.state.currTag == "All" ? true : item.node.frontmatter.projectType == this.state.currTag).map(post => {
           const props = {
             title: post.node.frontmatter.title,
             subtitle: post.node.frontmatter.subtitle,
@@ -162,21 +141,24 @@ class BlogList extends React.Component {
 
         {/* Filter Buttons: when the button is pressed, change the filter of the  */}
         {/* Onclick non responsive 2020-09-04 */}
+        {/* why this.handleClick.bind? */}
         <Segment>
           <CaptionBox>
-            {Tags.map(tag => {
-              return <button key={"btn_" + tag} onClick={(e) => changeFilter(e, tag)}>{tag}</button>
+            <h3>Works</h3>
+            <h5>
+              FILTER
+            </h5>
+            {this.state.tags.map(tag => {
+              return <button key={"btn_" + tag} onClick={this.handleClick.bind(this, tag)}>{tag}</button>
             })}
             <button></button>
           </CaptionBox>
         </Segment>
         <Segment>
           <WorkBox>
-            <h5>
-              FILTER
-            </h5>
+            
 
-            {filteredPostsComp}
+            {filtPosts}
           </WorkBox>
         </Segment>
 
