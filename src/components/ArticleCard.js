@@ -70,10 +70,10 @@ const CardLink = styled(Link)`
 `
 
 const CardTitle = styled.h5`
+	color: ${colors.grey400};
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-weight: 100;
 	text-transform: uppercase;
-	margin: 0;
 	margin-top: 16px;
 `
 
@@ -105,7 +105,6 @@ const ArticleCard = props => {
 				<CardImage style={{ backgroundImage: `url("${cover}")` }}></CardImage>
 				<CardTextbox>
 					<CardTitle>{title}</CardTitle>
-					<div className="spacer8px"/>
 					<CardSubtitle>{subtitle}</CardSubtitle>
 				</CardTextbox>
 			</CardLink>

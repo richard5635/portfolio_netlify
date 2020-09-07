@@ -200,32 +200,35 @@ class Content extends React.Component {
     return (
       <section>
         <div className="flexbox">
-          <div className='fh-5'>
+          <div className='fh-8'>
             <SubHeading>Overview</SubHeading>
             <p>{description}</p>
-            {(tags || date) && <ContentHeader date={date} tags={tags} />}
-            <div className='spacer16px'/>
+            {/* {(tags || date) && <ContentHeader date={date} tags={tags} />} */}
+            <div className='spacer16px' />
+          </div>
+          <div className='fh-5'>
+
 
             <SubHeading>Target Audience</SubHeading>
             <p>{targetAudience}</p>
-            <div className='spacer16px'/>
+            <div className='spacer16px' />
 
             <SubHeading>Date and Work Duration</SubHeading>
             <p>{dateDuration}</p>
-            <div className='spacer16px'/>
+            <div className='spacer16px' />
           </div>
 
           <div className='fh-3'>
             <SubHeading>Role</SubHeading>
             <p><b>{myRole}</b></p>
             <p>{myRoleDesc}</p>
-            <div className='spacer16px'/>
+            <div className='spacer16px' />
           </div>
         </div>
 
-        <div className="spacer64px"/>
+        <div className="spacer64px" />
         <Divider />
-        <div className="spacer64px"/>
+        <div className="spacer64px" />
 
         <ContentBody>
           <MDXRenderer>{content}</MDXRenderer>

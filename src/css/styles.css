@@ -7,7 +7,7 @@ html {
 body {
     background: rgb(240, 242, 243);
     font-family: 'Noto Serif JP', 'Times New Roman';
-    line-height: 1.5em;
+    line-height: 1.75em;
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -53,12 +53,12 @@ h5 {
     font-weight: 100;
     font-size: 0.8rem;
     letter-spacing: 1px;
-    line-height: 1.4em;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
 }
 
 p {
     font-size: 1rem;
-    line-height: 1.5em;
     margin-top: 0;
     margin-bottom: 2rem;
 }
