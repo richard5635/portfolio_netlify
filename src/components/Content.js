@@ -96,7 +96,7 @@ const ContentBody = styled.div`
     color: rgba(0, 0, 0, 0.8);
 
     box-sizing: border-box;    
-    border-left: 8px solid rgba(0, 0, 0, 0.8);
+    /* border-left: 8px solid rgba(0, 0, 0, 0.8); */
     margin: 30px 0px;
     padding: 5px 64px;
     border-radius: 0 8px 8px 0;
@@ -220,8 +220,8 @@ class Content extends React.Component {
 
           <div className='fh-3'>
             <SubHeading>Role</SubHeading>
-            <p><b>{myRole}</b></p>
-            <p>{myRoleDesc}</p>
+            <p>{myRole}</p>
+            {/* <p>{myRoleDesc}</p> */}
             <div className='spacer16px' />
           </div>
         </div>

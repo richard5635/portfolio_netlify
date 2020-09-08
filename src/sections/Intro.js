@@ -74,9 +74,7 @@ class Intro extends React.Component {
 						<h1>Hi, I'm Richard Hartanto</h1>
 						<h1>I code, design, and tinker.</h1>
 						<div className="spacer16px" />
-						<p>Richard Hartanto is a graduate student in UTokyo focusing on computer vision and interaction design.
-						Currently a computer vision intern at Pretia.
-          Loves streaming comedy and relaxing in onsen.</p>
+						<p>Currently based in Tokyo, I help businesses deliver their services with delightful interactions. Looking for people who also love sketching, hand-lettering, and streaming comedies :)</p>
 		  				<div>
 							  <MediaLink target="_blank" href="https://www.linkedin.com/in/richardsh/">LinkedIn</MediaLink>
 							  <MediaLink target="_blank" href="https://medium.com/@richard.sh093">Medium</MediaLink>

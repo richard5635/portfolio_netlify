@@ -82,7 +82,7 @@ class BlogList extends React.Component {
     super(props); // Forgot what this is
     this.state = {
       currTag: "All",
-      tags: ["All", "Side Project", "School", "Internship"]
+      tags: ["All", "Unity", "Front End", "VR/AR", "Side Project", "Academic", "Internship"]
     }
   }
 
@@ -100,9 +100,9 @@ class BlogList extends React.Component {
   }
 
   compareTags = (key, tags) => {
-    console.log(tags);
+    // console.log(tags);
     for(let i = 0; i < tags.length; i++){
-      if(tags[0] == key) {
+      if(tags[i] == key) {
         return true;
       }
     }
@@ -193,15 +193,29 @@ class BlogList extends React.Component {
             <button></button>
           </CaptionBox>
         </Segment>
+
         <Segment>
           <WorkBox>
-            
-
             {filtPosts}
           </WorkBox>
           <Divider />
           <div className="spacer32px" />
         </Segment>
+
+        {/* <Segment>
+          <CaptionBox>
+            <h3>Publications</h3>
+            <ul>
+              <li>aaaa</li>
+              <li>aaaa</li>
+              <li>aaaa</li>
+              <li>aaaa</li>
+            </ul>
+          </CaptionBox>
+          <WorkBox>
+
+          </WorkBox>
+        </Segment> */}
 
 
         {/* <Segment>
