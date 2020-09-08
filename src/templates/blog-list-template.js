@@ -82,7 +82,7 @@ class BlogList extends React.Component {
     super(props); // Forgot what this is
     this.state = {
       currTag: "All",
-      tags: ["All", "Unity", "Front End", "VR/AR", "Side Project", "Academic", "Internship"]
+      tags: ["All", "Unity", "Front End", "VR/AR", "Art/Design", "Side Project", "Academic", "Internship"]
     }
   }
 
