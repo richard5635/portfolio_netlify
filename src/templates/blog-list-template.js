@@ -2,6 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
+import ReactGA from 'react-ga';
 
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
@@ -56,6 +57,11 @@ const MediaLink = styled.a`
   }
 `
 
+function initializeReactGA() {
+  ReactGA.initialize('UA-119901732-1');
+  ReactGA.pageview('/');
+}
+
 // Change render either by checking state change or by using function. Which one works?
 
 class FilterButton extends React.Component {
@@ -90,6 +96,7 @@ class BlogList extends React.Component {
     this.setState({
       currTag: "All"
     });
+    initializeReactGA();
   }
 
   handleClick = (tag, e) => {
