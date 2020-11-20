@@ -77,7 +77,7 @@ class Intro extends React.Component {
 						<p>Logical as a designer, creative as an engineer. I help businesses deliver their services with delightful interactions. Currently based in Tokyo. You can find me sketching or streaming comedies in my free time.</p>
 		  				<div>
 							  <MediaLink target="_blank" href="https://www.linkedin.com/in/richardsh/">LinkedIn</MediaLink>
-							  <MediaLink target="_blank" href="https://medium.com/@richard.sh093">Medium</MediaLink>
+							  <MediaLink target="_blank" href="https://richardsh.medium.com/">Medium</MediaLink>
 							  <MediaLink target="_blank" href="https://codepen.io/richard5635">CodePen</MediaLink>
 							  <MediaLink target="_blank" href="https://github.com/richard5635">GitHub</MediaLink>
 						</div>
